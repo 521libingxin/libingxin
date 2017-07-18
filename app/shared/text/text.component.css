@@ -1,0 +1,27 @@
+.readonly{
+	height:60px;
+	padding:0 10px;
+}
+
+.readonly_left{
+	line-height:48px;
+	width:390px;
+	height: 50px;
+	display: inline-block;
+	font-size: 15px;
+}
+
+.readonly_value{
+	width:213px;
+	height: 50px;
+	display:block;
+	background-color:#f8f8f8;
+	color: #000;
+	font-size: 15px;
+	text-align: left;
+	line-height:48px;
+	text-indent: 12px;
+  	border: solid 1px #b4b4b4;
+	border-radius: 5px;
+	overflow: hidden;
+}

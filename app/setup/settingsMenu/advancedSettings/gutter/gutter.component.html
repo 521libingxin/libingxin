@@ -1,0 +1,13 @@
+<ul>
+    <li><text [textObj]="gutterStateObj"></text></li>
+    <li><list [selectObj]="gutterPumpSelectObj" (selectChange)="gutterPumpSelectChange($event)" ></list></li>
+    <li><text [textObj]="gutterPumpSpeedObj"></text></li>
+    <li><text [textObj]="gutterPumpDemandOffsetObj"></text></li>
+    <li>
+        <div class = "btn_box">
+            <div class = "fl btn_caption"><span>Reset min. gutter pump demand offset</span></div>
+            <div class = "fr btn_control"><button class="btn_style" (click)="reset()">Reset</button></div>
+        </div>
+    </li>
+    <!--<li><bool [caption]="gutterMaxSpeedEnableLable" [(boolData)]="gutterMaxSpeedEnableObj"></bool></li>-->
+</ul>

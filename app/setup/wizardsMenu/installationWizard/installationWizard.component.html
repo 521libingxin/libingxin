@@ -1,0 +1,24 @@
+<div class="wizard_in_top" >
+    <div class="wizard_top_left fl">Installation wizard</div>
+    <div class="wizard_top_right fr">{{childIndex+1}}/{{childList.length}}</div>
+</div>
+<div >
+    <clockSettings [checkObj]="checkObj" (checkChange)="checkChange($event)" *ngIf="childList[childIndex] == 'clockSettings'"></clockSettings>
+    <regionalSettings *ngIf="childList[childIndex] == 'regionalSettings'"></regionalSettings>
+    <networkConfiguration *ngIf="childList[childIndex] == 'networkConfiguration'"></networkConfiguration>
+    <applications *ngIf="childList[childIndex] == 'applications'"></applications>
+    <div class="wizards_botton_box" >
+        <div (click)="clickleft()" class="wizard_botton_disable fl" *ngIf="childIndex == 0">
+            <div class="wizards_left"></div>
+        </div>
+        <button (click)="clickleft()" class="wizards_botton fl" *ngIf="childIndex > 0">
+            <div class="wizards_left"></div>
+        </button>
+        <button (click)="clickright()" class="wizards_botton fr" *ngIf="childList.length-1 > childIndex">
+            <div class="wizards_right"></div>
+        </button>
+        <button (click)="complete()" class="wizards_complete fr" *ngIf="childList.length-1 == childIndex">
+            <div class="wizards_complete_text">Complete</div>
+        </button>
+    </div>
+</div>

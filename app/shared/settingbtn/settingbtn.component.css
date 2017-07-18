@@ -1,0 +1,159 @@
+.button_style_big,
+.button_style_big_noicon{
+	position:relative;
+	background:url(../img/Toggle_49_Left_Gradient2.png) no-repeat 0 0 / 100% 100%;;
+	width:138px;
+	height:60px;
+}
+.button_style_big_noicon img{
+	display: none !important;
+}
+.button_style_big_hover{
+	background:none;
+	border:1px solid #b6b6b6;
+	border-right:none;
+	border-bottom-left-radius: 8px;
+	border-top-left-radius: 8px;
+	cursor:default;
+}
+.button_img_show,.button_img_hover{
+	display: none;
+}
+.button_style_big .button_img_show,
+.button_style_big_hover .button_img_hover{
+	position:absolute;
+	left:14px;
+	top:14px;
+	width:30px;
+	height:30px;
+	display: block;
+}
+.button_style_mid .button_img_show{
+	position:absolute;
+	left:10px;
+	top:10px;
+	width:30px;
+	height:30px;
+	display: block;
+}
+.button_text{
+    text-align: left;
+    vertical-align: middle;
+}
+.button_style_big .button_text,
+.button_style_big_noicon .button_text{
+	line-height: 20px;
+	font-size:1.1rem;
+	margin-left:56px;
+	width:80px;
+	color:#fff;
+}
+.button_style_big_noicon .button_text{
+	margin-left:14px;
+	width:120px;
+}
+.button_style_big_hover .button_text{
+	color:#2d2d2d;
+}
+.button_style_mid{
+	position:relative;
+	background:url(../img/Button_49x200_Gradient3.png) no-repeat 0 0 / 100% 100%;;
+	width:150px;
+	height:50px;
+}
+.button_style_mid .button_text{
+	color:#fff;
+	line-height:18px;
+	font-size:1.1rem;
+	margin-left:45px;
+	width:100px;
+}
+.button_style_sma{
+	background:url(../img/Button_49x49_Gradient1.png) no-repeat 0 0 / 100% 100%;
+	width:46px;
+	height:46px;
+}
+.button_style_sma .button_text{
+	display:none;
+}
+.button_style_sma .button_img_show{
+	display: block;
+	width:30px;
+	height:30px;
+	margin:auto;
+}
+.button_style_sma_dis{
+	background:none;
+	width:46px;
+	height:46px;
+	border:1px solid #b4b4b4;
+	border-radius: 5px;
+	cursor:default;
+}
+.button_style_sma_dis .button_text{
+	display: none;
+}
+.button_style_sma_dis .button_img_hover{
+	display: block;
+	margin:auto;
+}
+.button_style_depth{
+	position:relative;
+	background:url(../img/Button_49x200_Gradient1.png) no-repeat 0 0 / 100% 100%;
+	width:148px;
+	height:46px;
+}
+.button_style_depth .button_text{
+	color:#fff;
+	line-height:18px;
+	font-size:1.1rem;
+	margin-left:45px;
+	width:100px;
+}
+.button_style_depth .button_img_show{
+	position:absolute;
+	left:8px;
+	top:8px;
+	width:30px;
+	height:30px;
+	display: block;
+}
+
+
+.button_style_depth_dis{
+	position:relative;
+	border:1px solid #b4b4b4;
+	border-radius: 5px;
+	width:168px;
+	height:46px;
+	cursor:default;
+}
+.button_style_depth_dis .button_text{
+	color:#2d2d2d;
+	line-height:18px;
+	font-size:1.1rem;
+	margin-left:45px;
+	width:120px;
+}
+.button_style_depth_dis .button_img_hover{
+	position:absolute;
+	left:8px;
+	top:8px;
+	width:30px;
+	height:30px;
+	display: block;
+}
+.button_betw{
+	position:relative;
+	width:24px;
+	height:46px;
+	cursor:default;
+}
+.button_betw .button_img_show{
+	display:block;
+	height:22px;
+	margin-left:2px;
+}
+.button_betw .button_text{
+	display:none;
+}

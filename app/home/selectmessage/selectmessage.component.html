@@ -1,0 +1,5 @@
+<ul>
+    <li *ngFor="let item of messagelist">
+        <span>{{item}}</span><button (click)="print(item)" style="width:100px;height:50px;border:1px solid #ccc;">print</button>
+    </li>
+</ul>

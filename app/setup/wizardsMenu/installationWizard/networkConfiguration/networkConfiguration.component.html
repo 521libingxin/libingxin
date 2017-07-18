@@ -1,0 +1,20 @@
+<div class="wizards_body_top" >3.Network configuration</div>
+<button (click)="editNetWork()">Edit</button>
+<modals [(modalopen)]="netWorkOpen" >
+    <main class="network_modals_box">
+        <div class="network_modals_top">Edit ethernet settings</div>
+        <div class="network_modals_main">
+          <div class="network_modals_list">1</div>
+          <div class="network_modals_list">2</div>
+          <div class="network_modals_list">3</div>
+        </div>
+        <div class="network_modals_bottom">
+            <button class="wizards_complete fl" >
+                Save
+            </button>
+            <button class="wizards_botton fr" (click)="closeNetWorkModal()" >
+                Cannal
+            </button>
+   	    </div>
+    </main>
+</modals>

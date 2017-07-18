@@ -1,0 +1,26 @@
+.detail_button{
+	background-image: url('../img/Button_49x564_Gradient4.png');
+	background-repeat:no-repeat; 
+	background-size: 100% 100%;
+	width:628px ;
+	height: 50px; 
+	margin-left: 5px;
+	margin-top: 10px; 
+	font-size: 15px;
+    text-indent: 10px;
+	color: #FFFFFF; 
+	border-radius: 5px; 
+	display: block;
+	text-align: left;
+	line-height: 40px;
+}
+
+.detail_btn_arrow{
+    float: right;
+    margin-right: 10px;
+    margin-top: 13px;
+}
+
+.top_margin{
+    margin-top: 5px;
+}

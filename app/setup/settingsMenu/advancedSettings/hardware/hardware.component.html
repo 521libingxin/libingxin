@@ -1,0 +1,16 @@
+<ul>
+    <li><list [selectObj]="printHeadSelectObj" (selectChange)="printHeadSelectChange($event)" ></list></li>
+    <li><text [textObj]="nozzleSizeObj"></text></li>
+    <li><text [textObj]="conduitLengthObj"></text></li>
+    <li><text [textObj]="printHeadSeriesObj"></text></li>
+    <li><text [textObj]="duoPrintHeadObj"></text></li>
+    <li><text [textObj]="modulationFrequencyObj"></text></li>
+    <li><list [selectObj]="modulationModeSelectObj" (selectChange)="modulationModeSelectChange($event)" ></list></li>
+    <li><list [selectObj]="inkContainerSelectObj" (selectChange)="inkContainerSelectChange($event)" ></list></li>
+    <li><list [selectObj]="pumpTypeSelectObj" (selectChange)="pumpTypeSelectChange($event)" ></list></li>
+    <li><text [textObj]="startingModeObj"></text></li>
+    <li><bool [caption]="WarmupModeEnableLable" [(boolData)]="WarmupModeEnableObj"></bool></li>
+    <li><bool [caption]="WakeupModeEnableLable" [(boolData)]="WakeupModeEnableObj"></bool></li>
+    <li><list [selectObj]="inkSystemSelectObj" (selectChange)="inkSystemSelectChange($event)" ></list></li>
+    <li><text [textObj]="ITMTypeRequiredObj"></text></li>
+</ul>

@@ -1,0 +1,18 @@
+<div class="labelfindertop" >
+    <button class="rectangle">
+        <img class="labelicon" src="img/Icon_File_manager_Available.png" />
+    </button>
+    <list [selectObj]="selectObj" (selectChange)="selectChange($event)" ></list>
+    <!--<button class="fr selectstyle form-control" (click)="labelchange()">{{labelorderby}}</button>-->
+</div>
+<div class="labelfinderbody" >
+    <ul>
+        <li class="labelli" *ngFor="let item of messagelist">
+            <img class="labelicon" src="img/Icon_File_manager_Selected.png" />
+            <span class="labelname">{{item}}</span>
+            <button (click)="preview(item)"class="square_btn square_btn_min fr" >Preview</button>
+            <button (click)="edit(item)" class="square_btn square_btn_min fr" >Edit</button>
+            <button (click)="print(item)" class="square_btn square_btn_min fr" >Print</button>
+        </li>
+    </ul>
+</div>

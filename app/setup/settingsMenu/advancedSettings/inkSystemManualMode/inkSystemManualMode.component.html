@@ -1,0 +1,11 @@
+<ul>
+    <li><list [selectObj]="pumpStateSelectObj" (selectChange)="pumpStateSelectChange($event)" ></list></li>
+    <li><text [textObj]="currentPressureObj"></text></li>
+    <li><inputDialog [requestObj]="pressureSetPointObj" (requestObjChange)="pressureSetPointChange($event)"></inputDialog></li>
+    <li><text [textObj]="currentPumpSpeedObj"></text></li>
+    <li><inputDialog [requestObj]="speedSetPointObj" (requestObjChange)="speedSetPointChange($event)"></inputDialog></li>
+    <li><bool [caption]="gutterDryAlertEnableLable" [(boolData)]="gutterDryAlertEnableObj"></bool></li>
+    <li><inputDialog [requestObj]="gutterPumpSpeedSetPointObj" (requestObjChange)="gutterPumpSpeedSetPointChange($event)"></inputDialog></li>
+    <li><text [textObj] = 'gutterPumpSpeedObj'></text></li>
+    <li><bool [caption]="gutterPumpEnableLable" [(boolData)]="gutterPumpEnableObj"></bool></li>
+</ul>

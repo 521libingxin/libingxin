@@ -1,0 +1,36 @@
+<div class="home_box">
+  <div *ngIf="showimg" class="home_main_bg" (click)="showimgclick()"></div>
+  <!--
+  <div *ngIf="showimg" class="home_main_left">
+      <div class="home_left_btn fl" (click)="showalert()">General</div>
+      <div class="home_left_btn home_left_btn_hover fr" >PG</div>
+  </div>-->
+  <!--<div *ngIf="showimg" class="home_main_box">
+      <button class="home_btn fl home_btn_finder" (click)="go('labelfinder')" >
+          <span>{{ 'Label finder' | translate }}</span>
+      </button>
+      <button class="home_btn fr home_btn_creator" (click)="go('labelCreator')">
+          <span>{{ "Label creator" | translate }}</span>
+      </button>
+  </div>-->
+  <div *ngIf="showimg" class="home_main_box_more">
+      <button class="home_btn fl home_btn_edit" (click)="edit()" >
+          <span>{{ 'Edit current label' | translate }}</span>
+      </button>
+      <button class="home_btn fl home_btn_finder" (click)="go('labelfinder')" >
+          <span>{{ 'Label finder' | translate }}</span>
+      </button>
+      <button class="home_btn fr home_btn_creator" (click)="go('labelCreator')">
+          <span>{{ "Label creator" | translate }}</span>
+      </button>
+  </div>
+  <div class="home_main_bottom">
+      <div>No label selected</div>
+      <div class="home_bottom_btn">Off</div>
+  </div>
+  <div class="homeimgbox" (click)="hideimgclick()">
+      <img class="homeimg" [style.width.px]="scale" src="{{imgurl}}" />
+  </div>
+  <button *ngIf="!showimg" class="imgbtn" (click)="zoomOut()">zoomOut</button>
+  <button *ngIf="!showimg" class="imgbtn2" (click)="zoomIn()">zoomIn</button>
+</div>

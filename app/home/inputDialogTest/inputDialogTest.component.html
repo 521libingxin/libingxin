@@ -1,0 +1,25 @@
+<div>InputDialogTestpage works!</div>
+<inputDialog [requestObj]="targetRunRateObjTest"></inputDialog>
+<inputDialog [requestObj]="printDelay"></inputDialog>
+
+<inputDialog [requestObj]="encoderPersistence" (requestObjChange)="linemoveChange($event)"></inputDialog>
+<inputDialog [requestObj]="globalStrokePitchGoal" (requestObjChange)="linemoveChange($event)"></inputDialog>
+<inputDialog [requestObj]="encoderStrokeResolution" (requestObjChange)="linemoveChange($event)"></inputDialog>
+<button (click)="openSetOeeTargetsPopup()">showmodals</button>
+<modals [(modalopen)]="setOeeTargetsPopupOpen" >
+    <main class="set_dialog_box">
+        <div class="set_dialog_top">Set OEE Targets</div>
+        <div>
+            <ul>
+                <li><inputDialog [requestObj]="printDelay_m"></inputDialog></li>
+                <li><inputDialog [requestObj]="encoderPersistence_m" (requestObjChange)="linemoveChange_m($event)"></inputDialog></li>
+                <li><inputDialog [requestObj]="globalStrokePitchGoal_m" (requestObjChange)="linemoveChange_m($event)"></inputDialog></li>
+            </ul>
+        </div>
+        <div class="set_dialog_bottom">
+            <button class="close_btn" (click)="closeSetOeeTargetsPopup()" style="font-size:18px;">
+                <span>OK</span>
+            </button>
+   	    </div>
+    </main>
+</modals>

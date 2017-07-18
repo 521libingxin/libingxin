@@ -1,0 +1,51 @@
+<div style="overflow:hidden">
+    <div  style ="width: 620px; height: 130px;">
+        <div id="position_print_height_title_id" >{{"Print height calibrate" | translate }}</div>
+        <div id="position_line_movement_id" style="position: relative;">
+            <div id="position_gray_id">
+                <img style ="margin-top: 47px;" src="img/Graphic_PHLine_Gray.png"/>
+                <img style ="margin-top: 0px; height: 39px; margin-left: 10px;" src="img/Graphic_H_Small_Gray.png"/>
+                <img style ="margin-top: -22px;" src="img/Graphic_PHLine_Gray.png"/>
+            </div>
+            <div id="position_green_id">
+                <img id="top_lineH" [style.bottom.px] = "bigHBottom+bigHHeight" style ="position: absolute;" src="img/Graphic_PHLine.png"/>
+                <img id="graphic_bigH" [style.height.px] = "bigHHeight" [style.bottom.px] = "bigHBottom" style ="width: 30px; margin-left: 65px; position: absolute;" src="img/Graphic_H_Big_Coloured.png"/>
+                <img id="bottom_lineH" [style.bottom.px] = "bigHBottom" style ="position: absolute;"src="img/Graphic_PHLine.png"/>
+            </div>
+        </div>	
+        <div  id="position_movement_unit_id" >
+            <ul>
+                <div style="margin-top: 10px;" >{{"Charge scaling(%)" | translate }}</div>
+                <div style="margin-top: 30px;" >{{"EHT(%)" | translate }}</div>
+            </ul>
+        </div>
+        <div  id="position_line_movement_control_id">
+                <div id="change_scaling_id" class ="position_control_rectangle">
+                    <button class = "position_control_button_left" (click)="changeValue(selCS,'<')">&lt;</button>
+                    <div  class ="position_control_text" (click)="changeValue(selCS,'<<')">{{leftDataTextCS}}</div>
+                    <div  id="scaling_middle_id" class ="position_control_text" style="color: #ffffff;">{{currDataTextCS}}</div>
+                    <div  class ="position_control_text" (click)="changeValue(selCS,'>>')">{{rightDataTextCS}}</div>
+                    <button class = "position_control_button_right" (click)="changeValue(selCS,'>')">&gt;</button>
+                </div>
+                <div id="EHT_id" class ="position_control_rectangle">
+                    <button class = "position_control_button_left" (click)="changeValue(selEHT,'<')">&lt;</button>
+                    <div  class ="position_control_text" (click)="changeValue(selEHT,'<<')">{{leftDataTextEHT}}</div>
+                    <div  id="EHT_middle_id" class ="position_control_text" style="color: #ffffff;">{{currDataTextEHT}}</div>
+                    <div  class ="position_control_text" (click)="changeValue(selEHT,'>>')">{{rightDataTextEHT}}</div>
+                    <button class = "position_control_button_right" (click)="changeValue(selEHT,'>')">&gt;</button>
+                </div>
+        </div>
+    </div>
+    
+    <div id="position_calibrate_id">
+        <button id="position_calibrate_button_id" (click)="goWizard('wizardsMenu/upgradewizard')">{{ "Calibrate" | translate }}</button>
+    </div>
+
+    <ul class="position_box" >
+        <li><inputDialog [requestObj]="printDelay" ></inputDialog></li>
+
+        <li><inputDialog [requestObj]="printHeight" ></inputDialog></li>
+        <li><bool [caption]="invertCaption" [(boolData)]="globalInverse"></bool></li>
+        <li><bool [caption]="reverseCaption" [(boolData)]="globalReverse"></bool></li>
+    </ul>
+</div>

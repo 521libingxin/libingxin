@@ -1,0 +1,141 @@
+<div class="oeepage_left_box">
+    <ul class="oeepage_left_box_ul">
+        <li class="oeepage_left_box_li_none">
+            <div class="oeepage_b_l_top elapsed_time_box" >{{"Elapsed time" | translate}}</div>
+            <div class="oeepage_b_l_bot">{{strMachineRunTime}}</div>
+        </li>
+        <li class="oeepage_left_box_li_none">
+            <div class="oeepage_b_l_top">{{"Est. end of Job" | translate}}</div>
+            <div class="oeepage_b_l_bot">{{oeeEstJobEnd}}</div>
+        </li>
+        <li class="oeepage_left_box_li_none">
+            <div class="oeepage_b_l_top">{{"Current availability (%)" | translate}}</div>
+            <div class="oeepage_b_l_bot">{{oeePtrinterAvailability}}</div>
+        </li>
+        <li class="oeepage_left_box_li_none">
+            <div class="oeepage_b_l_top">{{"Operational availability (%)" | translate}}</div>
+            <div class="oeepage_b_l_bot">{{oeeOperationalAvailability}}</div>
+        </li>
+    </ul>
+</div>
+<div class="oeepage_mid_top_box">
+    <div class="oeepage_mid_top_box_left">
+        <div class="oeepage_b_2_top">{{"Print rates (prints/min)" | translate}}</div>
+        <div class="oeepage_b_2_bot">{{"Target: " | translate}}{{targetNum}}</div>
+    </div>
+    <div class="oeepage_mid_top_box_main">
+        <div class="oeepage_mid_top_box_line" [style.transform]= "strTargetRate" [style.transform-origin]= "strTransformOrigin"></div>
+    </div>
+    <div class="oeepage_mid_top_box_down">
+        {{oeeCurrentRunRate}}
+    </div>
+</div>
+<div class="oeepage_mid_bottom_box">
+    <div class="oeepage_mid_bottom_box_t1">
+       {{"Print counts" | translate}}
+    </div>
+    <div class="oeepage_mid_bottom_box_t2">
+        <span class="fl">{{"Above target " | translate}}</span>
+        <span class="fr">{{"Final target " | translate}}</span>
+    </div>
+    <div class="oeepage_mid_bottom_box_t3">
+        <span class="fl">{{oeeAboveTarget}}</span>
+        <span class="fr">{{oeeFinalTarget}}</span>
+    </div>
+    <div class="oeepage_mid_bottom_box_t4">
+        <span style="top:100px;left:15px;right:10px;">
+			<span class="oee_print_count_progress_box">
+				<span [ngClass]="oeeProgressColor" [ngStyle]= "{width:strProgressLoc}">
+					<span class="oee_progress_arrow_icon"></span>
+				</span>
+			</span>
+			<span [ngClass]="targetPosition" [ngStyle]= "{left:strTargetLoc}">
+				<span class="target_top_arrow_icon"></span>
+				<span class="target_cross_icon"></span>
+			</span>
+			<span [ngClass]="userAction" [ngStyle]= "{left:strUserActionLoc}">
+				<span class="user_action_top_arrow_icon"></span>
+				<span class="user_action_cross_icon"></span>
+			</span>
+		</span>
+    </div>
+</div>
+<div class="oeepage_button_group">
+     <button class="oeepage_button_group_set" (click)="openSetOeeTargetsPopup()"><img id="targets" src="../../../img/head/Icon_Settargets_Available.png">{{"Set targets" | translate}}</button>
+    <button class="oeepage_button_group_setting" (click)="openSettingPopup()"><img id="settings" src="../../../img/head/Icon_Settings_23x23_Available.png"></button>
+</div>
+<div class="oeepage_right_box">
+    <div class="oeepage_right_box_t1">
+        <div style="margin-left:5px;">{{"Next operator interaction (est. on current run rates)" | translate}}</div>
+    </div>
+    <!--<div class="oeepage_right_box_t2">
+        {{"Change make-up cartridge" | translate}}
+    </div>
+    <div class="oeepage_right_box_t3">
+        {{oeeMakeupChangeTime}}
+    </div>-->
+    <div class="oeepage_right_box_t2">
+        {{"Change ink cartridge" | translate}}
+    </div>
+    <div [ngClass]="inkChangeTimeHandColor">
+        {{oeeInkChangeTime}}
+    </div>
+    <div class="oeepage_right_box_t4">
+        {{"Upcoming" | translate}}
+    </div>
+    <div class="oeepage_right_box_t5">
+        <div class="oeepage_upcoming_top">{{"Change ITM cartridge" | translate}}</div>
+        <div class="oeepage_upcoming_bot">{{oeeItmChangeTime}}</div>
+    </div>
+    <!--<div class="oeepage_right_box_t5">
+        <div class="oeepage_upcoming_top">{{"Change ink cartridge" | translate}}</div>
+        <div class="oeepage_upcoming_bot">{{inkchangetime}}</div>
+        {{"Change ink cartridge" | translate}}&nbsp;{{inkchangetime}}
+    </div>-->
+</div>
+<div class="head_list_bt">
+    <div class="oeepage_bot_left">
+        <div class="oeepage_bot_ico_left"><img src="../../../img/head/Icon_Printcounts.png"></div>
+        <div class="oeepage_bot_ico_right">{{oeeTotalPrints}}</div>
+    </div>
+    <div class="oeepage_bot_right_run_rate">
+        <div class="oeepage_bot_ico_left"><img src="../../../img/head/Icon_Printrates.png"></div>
+        <div class="oeepage_bot_ico_right">{{oeeCurrentRunRate}}</div>
+    </div>
+    <div [ngClass]="inkChangeTimeBackgroundStyle">
+        <div class="oeepage_bot_ico_right">{{oeeInkChangeTime}}</div>
+    </div>
+    <div class="head_list_md">{{"Overall equipment efficiency" | translate}}</div>
+</div>
+
+<modals [(modalopen)]="setOeeTargetsPopupOpen" >
+    <main class="set_dialog_box">
+        <div class="set_dialog_top">Set OEE Targets</div>
+        <div>
+            <ul>
+                <li><inputDialog [requestObj]="targetRunRateObj"></inputDialog></li>
+                <li><inputDialog [requestObj]="totalPrintsObj"></inputDialog></li>
+            </ul>
+        </div>
+        <div class="set_dialog_bottom">
+            <button class="close_btn" (click)="closeSetOeeTargetsPopup()" style="font-size:18px;">
+                <span>OK</span>
+            </button>
+   	    </div>
+    </main>
+</modals>
+<modals [(modalopen)]="settingPopupOpen" >
+    <main class="set_dialog_box">
+        <div class="set_dialog_top">OEE Settings</div>
+        <div>
+            <ul>
+                <li><list [selectObj]="oeeResetModeSelectObj" (selectChange)="oeeResetModeSelectChange($event)" ></list></li>
+            </ul>
+        </div>
+        <div class="set_dialog_bottom">
+            <button class="close_btn" (click)="closeSettingPopup()" style="font-size:18px;">
+                <span>Close</span>
+            </button>
+   	    </div>
+    </main>
+</modals>

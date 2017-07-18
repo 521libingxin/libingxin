@@ -1,0 +1,28 @@
+.content_id{
+	width: 620px; 
+	height: 65px; 
+}
+
+.content_button_id{
+	width:217px; 
+	height:55px;
+	font-size:15px;  
+	color: #FFFFFF;
+	border:0;
+	background-image: url("/img/Button_49x200_Gradient2.png");
+	background-size: 217px 55px;
+	border-radius:5px; 
+    float: right;
+}
+
+.content_text_id{
+	width:217px; 
+	height:55px;
+	font-size:15px;  
+	color: #000000;
+    display: inline-block;
+    margin-left: 15px;
+    line-height: 55px;
+    text-align: left;
+    vertical-align: middle;
+}

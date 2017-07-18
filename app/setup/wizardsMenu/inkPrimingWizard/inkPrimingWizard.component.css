@@ -1,0 +1,56 @@
+.ink_priming_top{
+    height:55px;
+    line-height:55px;
+    padding:0 140px;
+}
+.ink_priming_top .wizards_botton{
+    text-align: center;
+    width:220px;
+}
+.ink_priming_body{
+    position:absolute;
+    overflow: auto;
+    top:120px;
+    bottom:70px;
+    left:90px;
+    right:75px;
+}
+.ink_priming_body li{
+    width:280px;
+    float:left;
+    height:45px;
+    margin-bottom:5px;
+    position:relative;
+}
+.ink_priming_li_left{
+    width:260px;
+    height:45px;
+    line-height: 45px;
+    float:left;
+    text-indent: 20px;
+    font-size:0.9rem;
+}
+.ink_priming_li_right{
+    position:absolute;
+    right:0;
+    top:0;
+    width:100px;
+    height:43px;
+    line-height:43px;
+    text-align: center;
+    border:1px solid #b4b4b4;
+    background:#f0f0f0;
+    border-radius: 5px;
+    font-size:0.9rem;
+}
+.ink_priming_bottom{
+    position:absolute;
+    bottom:0;
+    height:60px;
+    left:0;
+    right:0;
+}
+.ink_priming_bottom .wizards_complete{
+    margin:auto;
+    display: block;
+}

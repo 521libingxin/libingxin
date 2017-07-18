@@ -1,0 +1,20 @@
+<div>
+    <div class="quality_caption">Press an image for details</div>
+    <ul>
+		<li *ngFor="let item of qualityList; let i = index; ">
+			<img class="quality_btn_background_img" src ={{qualityList[i].img}} (click)="showPopupQuality(i)"/>
+		</li>
+	</ul>
+</div>
+
+<modals [(modalopen)]="qualityPopupOpen" >
+    <main class="set_dialog_box">
+        <div class="set_dialog_top">Print quality problems</div>
+        <div class="set_dialog_content">{{qualityContent}}</div>
+        <div class="set_dialog_bottom">
+            <button class="close_btn" (click)="closeQualityPopup()">
+                <span>OK</span>
+            </button>
+   	    </div>
+    </main>
+</modals>

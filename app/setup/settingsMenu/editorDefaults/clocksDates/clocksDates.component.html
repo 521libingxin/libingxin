@@ -1,0 +1,63 @@
+<div class="clock_box">
+    <div class="clock_rect">
+        <div class="clock_caption">{{ "Hour codes" | translate }}</div>
+        <button class="clock_button" (click)="showPopup('hourCodes')">{{ "View" | translate }}</button>
+    </div>
+    <div class="clock_rect">
+        <div class="clock_caption">{{ "Day of week codes" | translate }}</div>
+        <button class="clock_button" (click)="showPopup('dayOfWeekCodes')">{{ "View" | translate }}</button>
+    </div>
+    <div class="clock_rect">
+        <div class="clock_caption">{{ "Day of month codes" | translate }}</div>
+        <button class="clock_button" (click)="showPopup('dayOfMonthCodes')">{{ "View" | translate }}</button>
+    </div>
+    <div class="clock_rect">
+        <div class="clock_caption">{{ "Month codes" | translate }}</div>
+        <button class="clock_button" (click)="showPopup('monthCodes')">{{ "View" | translate }}</button>
+    </div>
+    <div class="clock_rect">
+        <!--<div class="clock_caption">{{ "Calendar scheme to edit" | translate }}</div>
+        <button class="clock_button" (click)="showPopup('')">{{ "View" | translate }}</button>-->
+        <list [selectObj]="calendarSchemeSelectObj" (selectChange)="calendarSchemeSelectChange($event)"></list>
+    </div>  
+    <div class="clock_rect">
+        <div class="clock_caption">{{ "Day names" | translate }}</div>
+        <button class="clock_button" (click)="showPopup('dayNames')">{{ "View" | translate }}</button>
+    </div>
+    <div class="clock_rect">
+        <div class="clock_caption">{{ "Month names" | translate }}</div>
+        <button class="clock_button" (click)="showPopup('monthNames')">{{ "View" | translate }}</button>
+    </div>
+</div>
+
+<modals [(modalopen)]="codesPopupOpen">
+    <main class="set_dialog_box">
+        <div class="set_dialog_top">{{popupTitle}}</div>
+        <div class="set_dialog_content">
+            <div id="item_title" class="set_dialog_item">
+                <div class="set_dialog_item_id_caption">{{ popupColumnSerialID | translate }}</div>
+                <div class="set_dialog_item_name_value">{{ popupColumnName | translate }}</div>
+            </div>
+            <div id="item_value" *ngFor="let item of codesList; let i=index" class="set_dialog_item">
+                <div class="set_dialog_item_caption">{{ i+1 | translate }}</div>
+                <input type="text" class="set_dialog_item_input_value" [(ngModel)]="codesList[i]"/>
+            </div>
+        </div>
+        <div><button class="set_dialog_bottom" (click)="saveValue()">{{ "Save" | translate }}</button></div>
+    </main>
+</modals>
+
+<modals [(modalopen)]="namesPopupOpen">
+    <main class="set_dialog_box">
+        <div class="set_dialog_top">{{popupTitle}}</div>
+        <div class="set_dialog_content">
+            <div id="item_title" class="set_dialog_item">
+                <div class="set_dialog_item_name_caption">{{ popupColumnName | translate }}</div>
+            </div>
+            <div id="item_value" *ngFor="let item of codesList; let i=index" class="set_dialog_item">
+                <input type="text" class="set_dialog_item_input_name_value" [(ngModel)]="codesList[i]"/>
+            </div>
+        </div>
+        <div><button class="set_dialog_bottom" (click)="saveValue()">{{ "Save" | translate }}</button></div>
+    </main>
+</modals>

@@ -1,0 +1,15 @@
+<ul>
+    <li><text [textObj]="bupTimeObj"></text></li>
+    <li><text [textObj]="inkTemperatureObj"></text></li>
+    <li><text [textObj]="actualViscosityObj"></text></li>
+    <li><text [textObj]="pumpSpeedObj"></text></li>
+    <li><text [textObj]="pressureObj"></text></li>
+    <li><inputDialog [requestObj]="printPressureSetPoint" (requestObjChange)="printPressureSetPointChange($event)"></inputDialog></li>
+    <li><text [textObj]="originalPrintPressureSetObj"></text></li>
+    <li>
+        <div class = "btn_box">
+            <div class = "fl btn_caption"><span>Set the printing pressure set-point to its power-on setting</span></div>
+            <div class = "fr btn_control"><button class="btn_style" (click)="reset()">Reset</button></div>
+        </div>
+    </li>
+</ul>

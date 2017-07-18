@@ -1,0 +1,29 @@
+<modals [(modalopen)]="setWizardsModal" >
+    <main>
+        <div class="wizards_close_box">
+            <div class="wizards_close_top">
+                {{wizardChild}}:Confirm leaving the wizard
+            </div>
+            <div class="wizards_close_middle">
+                Are you sure you want to leave the wizard
+            </div>
+            <div class="wizards_close_bottom">
+                <button class="wizards_close_button fl" (click)="go('setup/wizardsMenu')" >
+                    <span>YES</span>
+                </button>
+                <button class="wizards_close_button fr" (click)="close()" >
+                    <span>NO</span>
+                </button>
+            </div>
+        </div>
+    </main>
+</modals>
+<div class="wizards_box">
+    <div class="wizards_top"></div>
+    <button class="btn_close" (click)="open()">
+        <div class="btn_close_in"></div>
+    </button>
+    <div class="wizards_main">
+        <router-outlet></router-outlet>
+    </div>
+</div>

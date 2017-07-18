@@ -1,0 +1,125 @@
+.alertdialogbox{
+    background:#fff;
+    width:472px;
+    position:relative;
+    height:425px;
+}
+.alertdialogtop{
+    height:60px;
+    line-height:60px;
+    text-align: center;
+    font-weight: bold;
+}
+.alertdialogmid{
+    height:286px;
+    position:absolute;
+    top:60px;
+    left:20px;
+    right:20px;
+    border:1px solid #b4b4b4;
+    border-radius: 10px;
+}
+.alertdialogmide_left{
+    width:50%;
+    height:100%;
+    border-radius: 10px;
+    background:#b4b4b4;
+    position:relative;
+    float:left;
+}
+.alertdialogbtn{
+    position:absolute;
+    bottom:15px;
+    height:50px;
+    left:30px;
+    right:30px;
+}
+.alertdialogbtnltrue{
+    float:left;
+    width:200px;
+    height:50px;
+    line-height: 50px;
+	background:url("../img/Blue_Button_65x200_Selected.png") no-repeat 0 0;
+	background-size: 100% 100%;
+    text-align: center;
+    color:#fff;
+}
+.alertdialogbtnlfalse{
+    float:left;
+    width:200px;
+    height:50px;
+    line-height: 50px;
+	background:url("../img/Blue_Button_49x200_Alert_Green.png") no-repeat 0 0;
+	background-size: 100% 100%;
+    text-align: center;
+    color:#fff;
+    cursor:pointer;
+}
+.alertdialogbtnr{
+    float:right;
+    width:200px;
+    height:50px;
+    line-height: 50px;
+	background:url("../img/Button_49x200_Gradient3.png") no-repeat 0 0;
+	background-size: 100% 100%;
+    text-align: center;
+    color:#fff;
+    cursor: pointer;
+}
+.alert_border_bottom{
+    border-bottom:1px solid #646464;
+}
+.alert_d_m_ul{
+    top:5px;
+    position:absolute;
+    left:5px;
+    right:5px;
+}
+.alert_d_m_li{
+    height:30px;
+    line-height:30px;
+    overflow: hidden;
+}
+.adml_l{
+    font-weight: bold;
+}
+.adml_r{
+    width:136px;
+}
+.adml_new{
+    line-height: 16px;
+}
+.alertdialogmide_right{
+    height:100%;
+    width:50%;
+    float:right;
+    position:relative;
+}
+.admr_top{
+    position:absolute;
+    top:15px;
+    right:7px;
+    width:200px;
+    height:50px;
+    line-height: 50px;
+	background:url("../img/Button_49x200_Gradient3.png") no-repeat 0 0;
+	background-size: 100% 100%;
+    text-align: center;
+    color:#fff;
+}
+.admr_mid{
+    position:absolute;
+    top:65px;
+    width:100%;
+    height:30px;
+    line-height:30px;
+    text-align: center;
+}
+.admr_img{
+    position:absolute;
+    image-rendering: pixelated;
+    width:163px;
+    height:163px;
+    left:25px;
+    top:98px;
+}

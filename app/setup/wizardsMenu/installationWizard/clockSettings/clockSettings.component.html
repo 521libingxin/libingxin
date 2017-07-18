@@ -1,0 +1,53 @@
+<div class="wizards_body_top" >2.Clock settings</div>
+<div class="regional_settings_body">
+    <div class="clock_settings_list">
+      <div class="clock_settings_text">System date</div>
+      <button class="clock_settings_button" (click)="changeDate()">312017</button>
+    </div>
+    <div class="clock_settings_list">
+      <div class="clock_settings_text">System time</div>
+      <button class="clock_settings_button" (click)="changeTime()">15:13:07</button>
+    </div>
+    <div class="qs-item-control" (click)="changeValue()" >
+      <div [ngClass]="setClasses()" >
+        <div class="checkboximg">
+        </div>
+      </div>
+    </div>
+</div>
+<modals [(modalopen)]="dateSettingsOpen" >
+    <main class="clock_modals_box">
+        <div class="clock_modals_top">Edit date</div>
+        <div class="clock_modals_main">
+          <div class="clock_modals_list">1</div>
+          <div class="clock_modals_list">2</div>
+          <div class="clock_modals_list">3</div>
+        </div>
+        <div class="clock_modals_bottom">
+            <button class="wizards_complete fl" >
+                Save
+            </button>
+            <button class="wizards_botton fr" (click)="closeDateModal()" >
+                Cannal
+            </button>
+   	    </div>
+    </main>
+</modals>
+<modals [(modalopen)]="timeSettingsOpen" >
+    <main class="clock_modals_box">
+        <div class="clock_modals_top">Edit time</div>
+        <div class="clock_modals_main">
+          <div class="clock_modals_list">1</div>
+          <div class="clock_modals_list">2</div>
+          <div class="clock_modals_list">3</div>
+        </div>
+        <div class="clock_modals_bottom">
+            <button class="wizards_complete fl" >
+                Save
+            </button>
+            <button class="wizards_botton fr" (click)="closeTimeModal()" >
+                Cannal
+            </button>
+   	    </div>
+    </main>
+</modals>

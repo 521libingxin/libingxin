@@ -1,0 +1,24 @@
+<div  *ngIf="requestObj != undefined">
+    <div *ngIf="requestObj.caption != ''" class="selectbox" >
+        <span class="fl selectleft" >{{requestObj.caption | translate}} </span>
+            <span class="fl selectleft" *ngIf="requestObj.unit != ''">
+                <span>&nbsp;({{requestObj.unit}})</span>
+            </span>
+        <div class="fr resizestyle form-control" >
+            <div class="addselectleft" ></div>
+            <div class="addselectbox addselectboxauto" [ngClass]="{addselectboxdisable: requestObj.disabled}" style="width:215px !important;">
+            <input type="text" class="add_select_input" disabled="disabled" (keyup)="resizekeyup($event)" [(ngModel)]="requestObj.value" />
+                <div class="qt-sel-clicklefthide addselectbtn" [ngClass]="{qt_sel_clickleft: requestObj.value > requestObj.datamin && !requestObj.disabled}" (click)="dec()" style="right:60px;" ></div>
+                <div class="qt-sel-clickrighthide addselectbtn" [ngClass]="{qt_sel_clickright: requestObj.value < requestObj.datamax && !requestObj.disabled}" (click)="inc()" style="right:0px;" ></div>
+            </div>
+        </div>
+    </div>
+    <div *ngIf="requestObj.caption == ''" class="addselectall" >
+        <div class="addselectleft" ></div>
+        <div class="addselectbox addselectboxauto" [ngClass]="{addselectboxdisable: requestObj.disabled}">
+        <input type="text" class="add_select_input" disabled="disabled" (keyup)="resizekeyup($event)" [(ngModel)]="requestObj.value" />
+            <div class="qt-sel-clicklefthide addselectbtn" [ngClass]="{qt_sel_clickleft: requestObj.value > requestObj.datamin && !requestObj.disabled}" (click)="dec()" style="right:60px;" ></div>
+            <div class="qt-sel-clickrighthide addselectbtn" [ngClass]="{qt_sel_clickright: requestObj.value < requestObj.datamax && !requestObj.disabled}" (click)="inc()" style="right:0px;" ></div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,62 @@
+
+.checkboxbtn{
+	width:49px;
+	height:49px;
+	background:url('../img/Input_49x49.png');
+}
+.checkboxbtn:active{
+	background:url('../img/Blue_Button_49x49_Gradient_3.png')
+}
+.checkboximg{
+	width:49px;
+	height:49px;
+}
+.checkboxon .checkboximg{
+	background:url('../img/Icon_Tickmark_Available.png') no-repeat center center;
+}
+.checkboxon:active .checkboximg{
+	background:url('../img/Icon_Tickmark_Pressed.png') no-repeat center center;
+}
+.checkboxoff .checkboximg{
+	background:none;
+}
+.checkboxbtndisableon:active,.checkboxbtndisableoff:active{
+	background:url('../img/Input_49x49.png');
+}
+.checkboxbtndisableon:active .checkboximg{
+	background:url('../img/Icon_Tickmark_Available.png') no-repeat center center;
+}
+.checkboxbtndisableoff:active .checkboximg{
+	background:none;
+}
+
+.clock_modals_box{
+	width:490px;
+	height:330px;
+	background:#fff;
+}
+.clock_modals_top{
+	font-size:1.1rem;
+	height:70px;
+	line-height: 70px;
+	text-align: center;
+	font-weight: bold;
+}
+.clock_modals_main{
+	position:absolute;
+	top:70px;
+	bottom:90px;
+}
+.clock_modals_bottom{
+	position:absolute;
+	bottom:0;
+	left:115px;
+	right:115px;
+	height:80px;
+	line-height: 80px;
+}
+.clock_modals_bottom .wizards_complete,
+.clock_modals_bottom .wizards_botton{
+	width:120px;
+	text-align: center;
+}

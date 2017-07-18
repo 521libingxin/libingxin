@@ -1,0 +1,31 @@
+
+.checkboxbtn{
+	width:49px;
+	height:49px;
+	background:url('../img/Input_49x49.png');
+}
+.checkboxbtn:active{
+	background:url('../img/Blue_Button_49x49_Gradient_3.png')
+}
+.checkboximg{
+	width:49px;
+	height:49px;
+}
+.checkboxon .checkboximg{
+	background:url('../img/Icon_Tickmark_Available.png') no-repeat center center;
+}
+.checkboxon:active .checkboximg{
+	background:url('../img/Icon_Tickmark_Pressed.png') no-repeat center center;
+}
+.checkboxoff .checkboximg{
+	background:none;
+}
+.checkboxbtndisableon:active,.checkboxbtndisableoff:active{
+	background:url('../img/Input_49x49.png');
+}
+.checkboxbtndisableon:active .checkboximg{
+	background:url('../img/Icon_Tickmark_Available.png') no-repeat center center;
+}
+.checkboxbtndisableoff:active .checkboximg{
+	background:none;
+}

@@ -1,0 +1,193 @@
+.head_page1bt_left{
+    width:160px;
+    height:38px;
+    position:absolute;
+    left:26px;
+    top:12px;
+}
+.head_page1bt_right{
+    width:160px;
+    height:38px;
+    position:absolute;
+    right:26px;
+    top:12px;
+}
+.head_page1bt_list{
+    width:37px;
+    height:37px;
+    background:#fff;
+    float:left;
+    margin-right:3px;
+    border-radius: 5px;
+}
+.head_page1bt_listr{
+    width:36px;
+    height:36px;
+    background:#b92437;
+    border:1px solid #fff;
+    float:left;
+    border-radius: 5px;
+}
+.head_page1bt_makeupicon{
+    float:left;
+    width:40px;
+    height:40px;
+    background:url(../../../img/Icon_Makeup_Available.png) no-repeat center center;
+}
+.head_page1bt_inklevel{
+    float:left;
+    width:40px;
+    height:40px;
+    background:url(../../../img/Icon_Ink_Available.png) no-repeat center center;
+}
+.cml_li_left{
+    width:40px;
+    height:40px;
+    background:#fff;
+    float:left;
+    margin-right:8px;
+    border-radius: 5px;
+}
+.cml_li_right{
+    width:300px;
+    float:left;
+}
+.m_n_none .head_line,
+.s_k_none .head_line,
+.jet_none .head_line,
+.usb_none .head_line
+{
+    height:100%;
+    width:100%;
+    background:url(../../../img/head/crossover_bg.png) no-repeat center center;
+    background-size: 100% 100%;
+}
+
+.m_n_none{
+    background:url(../../../img/head/Icon_MultipleNetwork_StateMissing_White.png) no-repeat center center #fff;
+    background-size: auto 25px;
+}
+.m_n_hover{
+    background:url(../../../img/head/Icon_MultipleNetwork_StateConnected_White.png) no-repeat center center #08b05b;
+    background-size: auto 25px;
+}
+
+
+
+/*none*/
+.s_k_none{
+    background:url(../../../img/head/Icon_ServiceKey_StateMissing_White.png) no-repeat center center #fff;
+    background-size: auto 25px;
+}
+/*factory*/
+.s_k_factory{
+    background:url(../../../img/head/Icon_ServiceKey_StateFactoryAndServiceKey_White.png) no-repeat center center #B92536;
+    background-size: auto 25px;
+}
+/*service*/
+.s_k_service{
+    background:url(../../../img/head/Icon_ServiceKey_StateConnected_White.png) no-repeat center center #08b05b;
+    background-size: auto 25px;
+}
+/*both*/
+.s_k_hover{
+    background:url(../../../img/head/Icon_ServiceKey_StateFactoryKey_White.png) no-repeat center center #B92536;
+    background-size: auto 25px;
+}
+
+
+.usb_none{
+    background:url(../../../img/head/Icon_USB_StateMissing_Gray.png) no-repeat center center #fff;
+    background-size: auto 25px;
+}
+.usb_hover{
+    background:url(../../../img/head/Icon_USB_StateConnected_White.png) no-repeat center center #08b05b;
+    background-size: auto 25px;
+}
+.connection_main_left{
+    width:350px;
+    height:240px;
+    position:absolute;
+    left:34px;
+    top:60px;
+}
+.cml_li{
+    height:40px;
+    width:350px;
+    border:1px solid #c4c4c4;
+    margin-bottom:16px;
+    border-radius: 5px;
+}
+.connection_main_right{
+    width:350px;
+    height:240px;
+    position:absolute;
+    right:34px;
+    top:60px;
+}
+.cmr_left{
+    width:167px;
+    height:217px;
+    border-radius: 5px;
+    float:left;
+    border:1px solid #c4c4c4;
+}
+.cmr_right{
+    width:167px;
+    height:217px;
+    border-radius: 5px;
+    float:right;
+    border:1px solid #c4c4c4;
+}
+.cmr_left_top{
+    height:30px;
+    line-height:30px;
+    text-align: center;
+    font-weight: bold;
+    font-size:0.9rem;
+}
+.cmr_left_body{
+    height:178px;
+    position:relative;
+    overflow:hidden;
+    background:url(../../../img/Graphic_MakeupInk_Main_Background.png) no-repeat center center;
+}
+.cmr_left_body_hover{
+    height:178px;
+    position:absolute;
+    top:-20px;
+    left:0;
+    right:0;
+    background:url(../../../img/Graphic_MakeupInk_Main_Overlay.png) no-repeat center center;
+    background-size:100% 100%;
+}
+.cmr_left_b_h_on{
+    height:23px;
+    position:absolute;
+    bottom:-5px;
+    background:url(../../../img/Graphic_MakeupInk_Main_Levelline.png) no-repeat center center;
+    left:0;
+    right:0;
+}
+.makeupicon{
+    background:url(../../../img/Icon_Makeup.png) no-repeat 7px 3px;
+    background-size:auto 25px;
+}
+.inklevelicon{
+    background:url(../../../img/Icon_Ink.png) no-repeat 135px 3px;
+    background-size:auto 25px;
+}
+.cml_li_top{
+    height:25px;
+    line-height:25px;
+    font-size:1rem;
+    font-weight: bold;
+}
+.cml_li_bottom{
+    width:320px;
+    height:12px;
+    line-height: 12px;
+    font-size:1rem;
+    -webkit-transform: scale(0.8);
+    -webkit-transform-origin: left 0;
+}

@@ -1,0 +1,108 @@
+<!--background color start-->
+<div class = "background_style">
+    <ul class = "background_column">
+        <li class="background_gray"></li>
+        <li class="background_white"></li>
+        <li class="background_gray"></li>
+        <li class="background_white"></li>
+        <li class="background_gray"></li>
+        <li class="background_white"></li>
+        <li class="background_gray"></li>
+        <li class="background_white"></li>
+        <li class="background_gray"></li>
+        <li class="background_white"></li>
+        <li class="background_gray"></li>
+        <li class="background_white"></li>
+        <li class="background_gray"></li>
+    </ul>
+    <ul class = "background_column">
+        <li class="background_gray"></li>
+        <li class="background_white"></li>
+        <li class="background_gray"></li>
+        <li class="background_white"></li>
+        <li class="background_gray"></li>
+        <li class="background_white"></li>
+        <li class="background_gray"></li>
+        <li class="background_white"></li>
+        <li class="background_gray"></li>
+        <li class="background_white"></li>
+        <li class="background_gray"></li>
+        <li class="background_white"></li>
+        <li class="background_gray"></li>
+    </ul>
+    <ul class = "background_column">
+        <li class="background_gray"></li>
+        <li class="background_white"></li>
+        <li class="background_gray"></li>
+        <li class="background_white"></li>
+        <li class="background_gray"></li>
+        <li class="background_white"></li>
+        <li class="background_gray"></li>
+        <li class="background_white"></li>
+        <li class="background_gray"></li>
+        <li class="background_white"></li>
+        <li class="background_gray"></li>
+        <li class="background_white"></li>
+        <li class="background_gray"></li>
+    </ul>
+</div>  
+<!--background color end-->
+<div class="livestatus_content">
+    <ul class="livestatus_clolumn_content boder_color">
+        <text-grid [caption]="inkLevelCaption" [value]="inkStatus" ></text-grid>
+        <text-grid [caption]="inkSensorLevelCaption" [value]="inkLevel" ></text-grid>
+        <text-grid [caption]="pressureCaption" [value]="pressure" ></text-grid>
+        <text-grid [caption]="actualViscosityCaption" [value]="viscosity" ></text-grid>
+        <text-grid [caption]="viscosityLowerLimitCaption" [value]="viscosityUpperLimit" ></text-grid>
+        <text-grid [caption]="heaterStateCaption" [value]="heaterState" ></text-grid>
+        <text-grid [caption]="gutterSpeedCaption" [value]="gutterPumpSpeed" ></text-grid>
+        <text-grid [caption]="makeUpLevelCaption" [value]="makeUpLevel" ></text-grid>
+        <text-grid [caption]="makeUpSensorLevelCaption" [value]="makeUpSensorLevel" ></text-grid>
+        <text-grid [caption]="speedCaption" [value]="pumpSpeed" ></text-grid>
+        <text-grid [caption]="targetViscosityCaption" [value]="targetViscosity" ></text-grid>
+    </ul>
+    <ul class="livestatus_clolumn_content boder_color">
+        <text-grid [caption]="viscosityLowerLimitCaption" [value]="viscosityLowerLimit" ></text-grid>
+        <text-grid [caption]="inkTemperatureCaption" [value]="inkTemperature" ></text-grid>
+        <text-grid [caption]="VacuumPressureCaption" [value]="VacuumPressure" ></text-grid>
+        <text-grid [caption]="feedValveCaption" [value]="feedValve" ></text-grid>
+        <text-grid [caption]="bleedValveCaption" [value]="bleedValve" ></text-grid>
+        <text-grid [caption]="washValveCaption" [value]="washValve" ></text-grid>
+        <text-grid [caption]="viscometerValveCaption" [value]="viscometerValve" ></text-grid>
+        <text-grid [caption]="makeupValveCaption" [value]="makeupValve" ></text-grid>
+    </ul>
+    <ul class="livestatus_clolumn_content">
+        <!-- Jet1-->
+        <text-grid [caption]="modulationLevelCaption1" [value]="modulationLevel1" ></text-grid>
+        <text-grid [caption]="modulationModeCaption1" [value]="modulationMode1" ></text-grid>
+        <text-grid [caption]="BUPTimeCaption1" [value]="BUPTime1" ></text-grid>
+        <text-grid [caption]="heaterTemperatureCaption1" [value]="heaterTemperature1" ></text-grid>
+        <text-grid [caption]="nozzleValveCaption1" [value]="nozzleValve1" ></text-grid>
+        <!-- Jet2-->
+        <!--<text-grid [caption]="modulationLevelCaption2" [value]="modulationLevel2"></text-grid>
+        <text-grid [caption]="modulationModeCaption2" [value]="modulationMode2"></text-grid>
+        <text-grid [caption]="BUPTimeCaption2" [value]="BUPTime2"></text-grid>
+        <text-grid [caption]="heaterTemperatureCaption2" [value]="heaterTemperature2"></text-grid>
+        <text-grid [caption]="nozzleValveCaption2" [value]="nozzleValve2"></text-grid>-->
+        <text-grid [caption]="" [value]="" ></text-grid>
+        <text-grid [caption]="" [value]="" ></text-grid>
+        <text-grid [caption]="" [value]="" ></text-grid>
+        <text-grid [caption]="" [value]="" ></text-grid>
+        <text-grid [caption]="" [value]="" ></text-grid>
+    </ul>
+</div>
+<div class="head_list_bt">
+    <div class="d_inklevel hd_width">
+        <div class="fl">{{ 'Ink level' | translate }}</div>
+        <div class="fr">{{inkLevel}}</div>
+    </div>
+    <div class="d_pressure hd_width">
+        <div class="fl">{{ 'Vacuum pressure(mBar)' | translate }}</div>
+        <div class="fr">{{VacuumPressure}}</div>
+    </div>
+    <div class="d_headtemperature hd_width">
+        <div class="fl">{{ 'Jet-1Head temperature' | translate }}</div>
+        <div class="fr">{{heaterTemperature1}}</div>
+    </div>
+    <div class="head_list_md">{{ 'Live status' | translate }}</div>
+</div>

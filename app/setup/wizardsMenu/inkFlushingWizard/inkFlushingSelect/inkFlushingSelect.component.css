@@ -1,0 +1,29 @@
+.inkflush_select_main{
+    position:absolute;
+    top:65px;
+    left:0;
+    right:0;
+    bottom:65px;
+    padding:0 110px;
+    overflow-y:auto;
+}
+.inkflush_select_button{
+    height:65px;
+    padding-top:10px;
+    position:absolute;
+    bottom:0;
+    left:160px;
+    right:160px;
+    background:#f0f0f0;
+}
+.inkflush_select_main_img{
+    margin:auto;
+    display:block;
+}
+.inkflush_select_step{
+    height:50px;
+    line-height:50px;
+}
+.inkflush_select_step{
+    text-align: right;
+}

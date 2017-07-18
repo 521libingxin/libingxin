@@ -1,0 +1,57 @@
+<div class="qs_footer">
+  <div *ngIf="isHome" class="qs_footer_box">
+    <div class="qs_footer_left">
+              <nav-icon-button [button]='home' (click)="go('home')" ></nav-icon-button>
+      <!--<nav-icon-button icon='../img/Icon_Home_Available.png' selectedIcon='../img/Icon_Home_Selected.png' styleclass='button_style_sma_dis' (click)="go('home')" ></nav-icon-button>-->
+    </div>
+    <ul class="qs_footer_mid">
+      <li *ngFor="let i of listButtons" class="qs_footer_li">
+                <nav-icon-button [button]='i' (click)="go(i.destination)" ></nav-icon-button>
+      </li>
+    </ul>
+    <div class="qs_footer_right">
+              <nav-icon-button [button]='login' (click)="open(content)" ></nav-icon-button>
+              <!--<nav-icon-button icon='../img/loginout_icon_unselected.png' styleclass='button_style_sma' (click)="go('home')" ></nav-icon-button>-->
+    </div>
+  </div>
+  <div *ngIf="!isHome" class="qs_footer_box">
+    <ul class="qs_footer_left">
+      <li *ngFor="let i of listButtons" class="qs_footer_li">
+                <nav-icon-button [button]='i' (click)="go(i.destination)" ></nav-icon-button>
+      </li>
+    </ul>
+  </div>
+  <div class="foot_more" >
+    <div class="foot_more_left fl">Fault</div>
+    <div class="foot_more_middle fl">Galileo</div>
+    <div class="foot_more_right fl">User defined</div>
+    <div class="foot_more_time fr">{{infoBarDateTime}}</div>
+  </div>
+</div>
+<modals [(modalopen)]="homemodal" >
+    <main class="set_dialog_box">
+        <div style="background:#fff;padding:10px;">
+          <button class="btn_depth_style" style="margin-bottom:7px;" (click)="closemodal()">Close</button>
+          <button class="btn_depth_style" style="margin-bottom:7px;" (click)="loginin()">Login</button>
+          <button class="btn_depth_style" style="margin-bottom:7px;" (click)="loginout()">LogOut</button>
+          <button class="btn_depth_style" style="margin-bottom:7px;">
+          Disconnect from printer
+          </button>
+          <button class="btn_depth_style" >
+          Lock screen
+          </button>
+      </div>
+    </main>
+</modals>
+
+<modals [(modalopen)]="homelogin" >
+    <main class="set_dialog_box">
+      <div style="padding:10px;background:#fff;">
+          <input type="input" style="display:block;text-align:center;height:45px;width:235px;border:1px solid #000;margin-bottom:10px;" [(ngModel)]="username" />
+          <input type="password" style="display:block;text-align:center;height:45px;width:235px;border:1px solid #000;margin-bottom:10px;" [(ngModel)]="password" />
+          <button class="btn_depth_style" (click)="login()" >
+          login
+          </button>
+      </div>
+    </main>
+</modals>

@@ -1,0 +1,141 @@
+.clock_box{
+    width: 620px; 
+    /*height:200px;*/
+    /*margin-left: 5px;*/
+	/*float: left;*/
+    overflow: hidden;
+}
+
+.clock_rect{
+	width: 100%; 
+	height: 65px; 
+    position: relative;
+	margin: 0 10px 0px 0;
+}
+
+.clock_caption{
+	width: 370px; 
+	height: 55px; 
+    line-height: 55px;
+    margin-left: 15px; 
+    vertical-align: middle;
+    display: inline-block ;
+}
+
+.clock_button{
+	width:217px; 
+	height:55px;
+	font-size:15px;  
+	color: #FFFFFF;
+	border:0;
+    float: right;
+    margin-right: 10px;
+	background-image: url("/img/Button_49x200_Gradient2.png");
+	background-size: 217px 55px;
+	border-radius:5px; 
+}
+
+.set_dialog_box{
+    background:#fff;
+    width:472px;
+    position:relative;
+    height:500px;
+    color: #666;
+}
+
+.set_dialog_top {
+    height: 35px;
+    line-height: 35px;
+    color: #8f8f8f;
+    text-align:center;
+}
+
+.set_dialog_content {
+	height:400px; 
+	overflow-y:auto;
+}
+
+.set_dialog_item {
+    height: 60px;
+	width: 100%;
+	float: left;
+}
+
+.set_dialog_item_id_caption {
+    height:50px;
+	width: 40%;
+	margin-left:5%;
+	padding-top: 20px;
+    color: #8f8f8f;
+	display: inline-block;
+}
+
+.set_dialog_item_name_value {
+    height: 50px;
+	width: 40%;
+	margin-right:5%;
+	padding-top: 20px;
+    color: #8f8f8f;
+	display: inline-block;
+}
+
+.set_dialog_item_caption {
+    height:50px;
+	width: 40%;
+	margin-left:5%;
+    line-height: 20px;
+    color: #8f8f8f;
+	display: inline-block;
+}
+
+.set_dialog_item_value {
+    height: 50px;
+	width: 40%;
+	margin-right:5%;
+    line-height: 20px;
+    color: #8f8f8f;
+	display: inline-block;
+}
+
+.set_dialog_item_input_value {
+    height: 50px;
+	width: 40%;
+	margin-right:5%;
+    line-height: 20px;
+    color: #8f8f8f;
+	display: inline-block;
+	border:1px solid #c6c6c6;
+	border-radius: 5px;
+}
+
+.set_dialog_item_name_caption {
+    height:50px;
+	width: 90%;
+	padding-top:20px;
+	padding-left:5%;
+    line-height: 20px;
+    color: #8f8f8f;
+	display: inline-block;
+}
+.set_dialog_item_input_name_value {
+    height: 50px;
+	width: 90%;
+	margin-left:5%;
+    line-height: 20px;
+    color: #8f8f8f;
+	display: inline-block;
+	border:1px solid #c6c6c6;
+	border-radius: 5px;
+}
+.set_dialog_bottom{
+	height:49px;
+	position:absolute;
+	bottom:10px;
+	width:120px;
+	text-align: center;
+	vertical-align: middle;
+	background-image: url("/img/Button_49x200_AlertGreen.png");
+	background-size: 120px 49px;
+	color: #FFFFFF;
+	margin-left:176px;
+}

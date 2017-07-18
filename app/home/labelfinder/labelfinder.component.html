@@ -1,0 +1,16 @@
+<div class="labelfindertop" >
+    <button class="rectangle">
+        <img class="labelicon" src="img/Icon_File_manager_Available.png" />
+    </button>
+    <list [selectObj]="selectObj" (selectChange)="selectChange($event)" ></list>
+    <!--<button class="fr selectstyle form-control" (click)="labelchange()">{{labelorderby}}</button>-->
+</div>
+<div class="labelfinderbody" >
+    <ul>
+        <li class="labelli">
+            <img class="labelicon" src="img/Icon_File_manager_Selected.png" />
+            <span class="labelname">{{selectmessage}}</span>
+            <button class="square_btn fr" (click)="go('labelfinder/selectmessage')">Open</button>
+        </li>
+    </ul>
+</div>

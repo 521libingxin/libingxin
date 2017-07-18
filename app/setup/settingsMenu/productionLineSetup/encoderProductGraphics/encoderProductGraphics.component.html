@@ -1,0 +1,80 @@
+<div  class = "qs_draw_content">
+    <ul style="display: inline-block;">
+        <li>
+            <div class = "encoder_lable">
+                <div class="qs_drawwave_caption" >{{'Encoder' | translate}}</div>
+            </div>
+            <div class = "frequency">
+                <div class = "frequency_value">{{intFrequency}}</div>
+                <div class = "frequency_unit">kHz</div>
+            </div>
+            <div class = "product_lable">
+                <div class="qs_drawwave_caption" >{{'Product detect' | translate}}</div>
+            </div>
+        </li>	
+        <li>
+            <div class = "wave_encoder">
+                <div id="draw_wave_encoder"></div>
+            </div>
+            <div class = "time_lable">
+                <div class = "sign_lable">
+                    <div style = "margin-bottom:120px;" >{{'High' | translate}}</div>
+                    <div >{{'Low' | translate}}</div>
+                </div>
+            </div>
+            <div class = "wave_product">
+                <div id="draw_wave_product"></div>
+            </div>
+            <div class = "time_lable">
+                <div class = "sign_lable" style = "float:right;">
+                    <div style = "margin-bottom:120px;" >{{'High' | translate}}</div>
+                    <div >{{'Low' | translate}}</div>
+                </div>
+
+            </div>
+        </li>
+        <li>
+            <div class = "time_lable" style = "margin-left:10px;">
+                <div class="qs_drawwave_time_caption">{{2*encoderFrame}}ms</div>
+            </div>
+            <div class = "time_lable" style = "margin-left:70px;">
+                <div class="qs_drawwave_time_caption">{{encoderFrame}}</div>
+            </div>
+            <div class = "time_lable" style = "margin-left:50px;">
+                <div class="qs_drawwave_time_caption" >{{'Now' | translate}}</div>
+            </div>
+            <div class = "time_lable" style = "margin-left:20px;">
+                <div class="qs_drawwave_time_caption">{{2*productFrame}}s</div>
+            </div>
+            <div class = "time_lable" style = "margin-left:70px;">
+                <div class="qs_drawwave_time_caption">{{productFrame}}</div>
+            </div>
+            <div class = "time_lable" style = "margin-left:45px;">
+                <div class="qs_drawwave_time_caption" >{{'Now' | translate}}</div>
+            </div>
+        </li>
+
+        
+        <li>
+            <div >
+                <div class="frame" style = "margin-left:0px;">
+                    <div class="qs_draw_timeframe_caption" >{{'Timeframe' | translate}}</div>
+                    <div class="qs_draw_control ng-scope" id="encoderCtrl">
+                        <input class="qs_draw_num_input" id="input"  type="text" [(ngModel)]="encoderFrame" disabled="disabled"/>
+                        <button class="qs_draw_num_btn" id="spindown" (click) = "timeFrameEncoderDown()"><img src="img/Icon_Drop_left_Available.png"/></button>
+                        <button class="qs_draw_num_btn" style = "border-top-right-radius: 5px;" id="spinup" (click) = "timeFrameEncoderUp()"><img src="img/Icon_Drop_right_Available.png"/></button>
+                    </div>
+                </div>
+                <div class="frame" style = "margin-left:10px;">
+                    <div class="qs_draw_timeframe_caption" >{{'Timeframe' | translate}}</div>
+                    <div class="qs_draw_control ng-scope" id="productCtrl">
+                        <input class="qs_draw_num_input" id="input"  type="text" [(ngModel)]="productFrame" disabled="disabled"/>
+                        <button class="qs_draw_num_btn" id="spindown" (click) = "timeFrameProductDown()"><img src="img/Icon_Drop_left_Available.png"/></button>
+                        <button class="qs_draw_num_btn" style = "border-top-right-radius: 5px;" id="spinup" (click) = "timeFrameProductUp()"><img src="img/Icon_Drop_right_Available.png"/></button>
+                    </div>
+                </div>
+            </div>
+        </li>
+
+    </ul>
+</div>

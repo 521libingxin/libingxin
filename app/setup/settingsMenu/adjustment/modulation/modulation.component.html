@@ -1,0 +1,12 @@
+<ul>
+    <li><text [textObj]="bupTimeObj"></text></li>
+    <li><text [textObj]="modulationLevelObj"></text></li>
+    <li><list [selectObj]="modulationModeSelectObj" (selectChange)="modulationModeSelectChange($event)" ></list></li>
+    <li [hidden] = "hideAutoModulationMode"><inputDialog [requestObj]="modulationSetPoint" (requestObjChange)="modulationSetPointChange($event)"></inputDialog></li>
+    <li [hidden] = "hideAutoModulationMode">
+        <div class = "btn_box">
+            <div class = "fl btn_caption" style = "line-height: 20px;"><span>Reset the modulation set point to the value it had when the printer was last switched on</span></div>
+            <div class = "fr btn_control"><button class="btn_style" (click)="reset()">Reset</button></div>
+        </div>
+    </li>
+</ul>

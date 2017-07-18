@@ -1,0 +1,18 @@
+
+<div class="modal_bg module{{modalVisible}}">
+    
+</div>
+<div  class="modal_box module{{modalVisible}}">
+    <div style="background:#fff;padding:10px;">
+        <div style="max-height:500px;overflow-y:auto;">
+            <div *ngFor="let i of modalObj" >
+                <button class="btn_depth_style" style="margin-bottom:7px;" (click)="selectItemOnList(i.key)">{{i.val}}</button>
+            </div>
+        </div>
+    </div>
+</div>
+<button (click)="closeModal()" class="modal_close_icon module{{modalVisible}}">
+    <div class="modal_close_in"></div>
+</button>
+
+

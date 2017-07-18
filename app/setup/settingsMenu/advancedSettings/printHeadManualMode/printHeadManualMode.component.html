@@ -1,0 +1,7 @@
+<ul>
+    <li><bool [caption]="skipNextFlushEnableLable" [(boolData)]="skipNextFlushEnableObj"></bool></li>
+    <li><list [selectObj]="heaterStateSelectObj" (selectChange)="heaterStateSelectChange($event)" ></list></li>
+    <li><inputDialog [requestObj]="autoModulationStartVoltageObj" (requestObjChange)="autoModulationStartVoltageChange($event)"></inputDialog></li>
+    <li><text [textObj]="temperatureObj"></text></li>
+    <li><inputDialog [requestObj]="temperatureSetPointObj" (requestObjChange)="temperatureSetPointChange($event)"></inputDialog></li>
+</ul>

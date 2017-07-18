@@ -1,0 +1,17 @@
+<div>
+    <encoder-product-graphics></encoder-product-graphics>
+</div>
+<span></span>
+<ul>
+    <li><list [selectObj]="encoderInputSelectObj" (selectChange)="encoderInputSelectChange($event)" ></list></li>
+    <li><text [textObj]="encoderPulseCountObj"></text></li>
+    <li><list [selectObj]="optimisationModeSelectObj" (selectChange)="optimisationModeSelectChange($event)" ></list></li>
+    <li><inputDialog [requestObj]="encoderPersistence" (requestObjChange)="linemoveChange($event)"></inputDialog></li>
+    <li><text [textObj]="currentLineSpeedObj"></text></li>
+    <li><inputDialog [requestObj]="globalStrokePitchGoal" (requestObjChange)="linemoveChange($event)"></inputDialog></li>
+    <li><inputDialog [requestObj]="encoderStrokeResolution" (requestObjChange)="linemoveChange($event)"></inputDialog></li>
+    <li><list [selectObj]="triggerModeSelectObj" (selectChange)="triggerModeSelectChange($event)" ></list></li>
+    <li><list [selectObj]="encoderModeSelectObj" (selectChange)="encoderModeSelectChange($event)" ></list></li>
+    <li><list [selectObj]="backlashDirSelectObj" (selectChange)="backlashDirSelectChange($event)" ></list></li>
+    <li><text [textObj]="backlashCountObj"></text></li>
+</ul>

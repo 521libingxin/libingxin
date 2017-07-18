@@ -1,0 +1,11 @@
+
+<div class="modal_bg module{{modalopen}}">
+    
+</div>
+<div  class="modal_box module{{modalopen}}">
+    <ng-content select="main"></ng-content>
+</div>
+<input type="text" [(ngModel)]="modalopen" style="display:none;" />
+<button (click)="closemodule()" class="modal_close_icon module{{modalopen}}">
+    <div class="modal_close_in"></div>
+</button>

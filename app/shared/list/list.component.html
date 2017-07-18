@@ -1,0 +1,36 @@
+<div *ngIf="selectObj.caption != ''" class="selectbox" >
+    <span class="fl selectleft" >{{selectObj.caption | translate}} </span>
+        <span class="fl selectleft" *ngIf="selectObj.unit != ''">
+            <span>(</span>
+            <span>{{selectObj.unit}}</span>
+            <span>)</span>
+        </span>
+        <span *ngFor="let i of selectObj.list" >
+            <button *ngIf="i.key == selectObj.key" class="fr selectstyle form-control" (click)="openListPopop()">{{i.val}}</button>
+        </span>
+</div>
+<span *ngIf="selectObj.caption == ''" class="selectbox" >
+    <span *ngFor="let i of selectObj.list" >
+        <button *ngIf="i.key == selectObj.key" class="fr selectstyle form-control" (click)="openListPopop()">{{i.val}}</button>
+    </span>
+</span>
+<!--
+<modals [(modalopen)]="settingPopupOpen" >
+    <main class="set_dialog_box">
+        <div class="modal_bg module{{moduleshow}}">
+            
+        </div>
+        <div  class="modal_box module{{moduleshow}}">
+            <div style="background:#fff;padding:10px;">
+                <div style="max-height:500px;overflow-y:auto;">
+                    <div *ngFor="let i of selectObj.list" >
+                        <button class="btn_depth_style" style="margin-bottom:7px;" (click)="changeL(i.key)">{{i.val}}</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button (click)="closemodule()" class="modal_close_icon module{{moduleshow}}">
+            <div class="modal_close_in"></div>
+        </button>
+    </main>
+</modals>-->

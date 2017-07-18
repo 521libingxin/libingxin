@@ -1,0 +1,19 @@
+.bool_rect{
+    width:100%;
+    height:50px;
+    background-size:100% 100%;
+    margin:0 10px 10px 0;
+}
+
+.bool_caption{
+    width:320px;
+    height:42px;
+    float:left;
+    margin-top:15px;
+    padding-left:10px;
+}
+.bool_data{
+    width:227px;
+    height:42px;
+    float:right;
+}

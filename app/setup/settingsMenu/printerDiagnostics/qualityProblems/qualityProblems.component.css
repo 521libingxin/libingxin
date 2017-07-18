@@ -1,0 +1,55 @@
+.quality_caption
+{
+	width:600px ;
+	height: 20px;
+	font-size:15px; 
+	margin-left: 10px;
+}
+.quality_btn_background_img{
+	width:600px ;
+	height: 80px; 
+	margin-left: 10px;  
+	margin-top: 10px; 
+}
+
+.set_dialog_box{
+    background:#fff;
+    width:472px;
+    position:relative;
+    height:250px;
+    color: #666;
+}
+
+.set_dialog_top {
+    height: 35px;
+    line-height: 35px;
+    color: #8f8f8f;
+    text-align:center;
+}
+
+.set_dialog_content {
+    height: 70px;
+    line-height: 20px;
+    margin-top: 50px;
+    color: #8f8f8f;
+    text-align:center;
+}
+
+.set_dialog_bottom{
+	height:60px;
+	position:absolute;
+	bottom:10px;
+	width:100%;
+	text-align: center;
+}
+
+.close_btn{
+	background: url("../img/Blue_Button_65x200_Pressed.png");
+	background-size:120px 60px;
+	width:120px;
+	height:60px;
+	border:0;
+	margin:0;
+	font-size:18px;
+	color:#fff;
+}

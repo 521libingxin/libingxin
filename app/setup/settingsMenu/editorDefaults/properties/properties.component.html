@@ -1,0 +1,30 @@
+<div class="properties_box">
+    <ul>
+      <li><inputDialog [requestObj]="forwardOff"></inputDialog></li>
+      <li><inputDialog [requestObj]="reverseOff"></inputDialog></li>
+      <li><list [selectObj]="repeatSelectObj" (selectChange)="repeatSelectChange($event)" ></list></li>
+      <li *ngIf="repeatPropertiesInfo.mode === 1">
+        <inputDialog [requestObj]="repeatCount" (requestObjChange)="repeatCountSelectChange($event)"></inputDialog>
+      </li>
+    </ul>
+    <ul *ngIf="repeatPropertiesInfo.mode !== 0">
+      <li><list [selectObj]="repeatPitchTypeSelectObj" (selectChange)="repeatPitchTypeSelectChange($event)" ></list></li>
+      <li><inputDialog [requestObj]="repeatPitch" (requestObjChange)="repeatPitchSelectChange($event)"></inputDialog></li>
+      <li><bool [caption]="updatePrintCaption" [(boolData)]="updatePrint" (checkChangeBool)="updatePrintChange($event)"></bool></li>
+      <li><list [selectObj]="endOfProductSelectObj" (selectChange)="endOfProductSelectChange($event)"></list></li>
+    </ul>
+    <ul>
+      <li><list [selectObj]="textElementSizeSelectObj" (selectChange)="textElementSizeSelectChange($event)" ></list></li> 
+    </ul>
+</div>
+<modals [(modalopen)]="setValueChangePopupOpen" >
+    <main class="set_dialog_box">
+        <div class="set_dialog_top">Default repeat settings</div>
+        <div class="set_dialog_content">The change to this setting will not take effect until a new label is created or loaded in the label editor.</div>
+        <div class="set_dialog_bottom">
+            <button class="close_btn" (click)="closeSetValueChangePopup()" style="font-size:18px;">
+                <span>OK</span>
+            </button>
+   	    </div>
+    </main>
+</modals>

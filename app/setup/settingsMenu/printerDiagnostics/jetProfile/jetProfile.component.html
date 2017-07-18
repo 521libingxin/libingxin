@@ -1,0 +1,50 @@
+	<div>
+		<div class ="jet_profile_rectangle">
+			<div class ="jet_profile_text">Jet must be running before profiling can be started</div>
+            <button id="calibrate_id" class ="jet_profile_button" (click)="onChangeState()" >{{changeStateButtonName | translate}}</button>
+		</div>
+		<div class ="jet_profile_rectangle">
+			<button id ="profile_jet_id" class ="jet_profile_button" (click)="onProfileJet()">Profile jet</button>
+		</div>
+		<!--Jet 1-->
+		<div class ="jet_profile_rectangle">
+			<div class ="jet_profile_text">{{profileTime|translate}}</div>
+			<button *ngIf="jet1BtnVisible" id="jet1_id" class ="jet_profile_button" (click)="jetClick(1)">{{"Jet 1"|translate}}</button>
+		</div>
+		<!--Jet 2-->
+		<div class ="jet_profile_rectangle">
+			<button *ngIf="jet2BtnVisible" id="jet2_id" class ="jet_profile_button" (click)="jetClick(2)">{{"Jet 2"|translate}}</button>
+		</div>
+	</div>
+	<modals [(modalopen)]="jetPopupOpen" >
+    <main class="set_dialog_box">
+        <div class="set_dialog_top">Jet profile results</div>
+        <div class="set_dialog_content">
+			<ul  *ngIf="btnName ==='Show graph'" style="width:600px;  height: 371px; overflow:auto;">
+				<li id="jet_title" style="font-weight:bold;"> 
+					<div class="set_table_item_li" >Mod</div> 
+					<div class="set_table_item_li" >Avg</div> 
+					<div class="set_table_item_li" >Min</div> 
+					<div class="set_table_item_li" >Max</div> 
+					<div class="set_table_item_li">%</div> 
+				</li>
+				<li *ngFor="let item of jetCurrentValue">
+					<div class="set_table_item_li">{{item[0]}}</div> 
+					<div class="set_table_item_li">{{item[1]}}</div> 
+					<div class="set_table_item_li">{{item[2]}}</div> 
+					<div class="set_table_item_li">{{item[3]}}</div> 
+					<div class="set_table_item_li">{{item[4]}}</div> 
+				</li>
+			</ul>
+			<div *ngIf="btnName ==='Show table'" id="draw_wave_graph_id" class="set_draw_graph"> </div>
+		</div>
+        <div class="set_dialog_bottom">
+			<button class="set_dialog_btn" (click)="showGraphOrTable()">
+                <span>{{btnName | translate}}</span>
+            </button>
+            <button class="set_dialog_btn" (click)="closeJetPopup()">
+                <span>Cancel</span>
+            </button>
+   	    </div>
+    </main>
+</modals>

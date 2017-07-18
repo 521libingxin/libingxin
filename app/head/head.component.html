@@ -1,0 +1,33 @@
+<div class="head_whole_page" [@dropDownPageAnimation]="dropDownPageState" >
+  <div class="head_top_box">
+    <button *ngIf="leftbtn != ''" class="head_jump_btnleft" (click)="goLeftPage()">{{leftbtn | translate}}</button>
+    <button *ngIf="rightbtn != ''" class="head_jump_btnright" (click)="goRightPage()">{{rightbtn | translate}}</button>
+  </div>
+  <div class="head_bottom_box_background"></div>
+  <ul class="head_pages_container" [@topPageJumpAnimation]="topPageState">
+    <li class="head_ul_list_li"><connectionPage></connectionPage></li>
+    <li class="head_ul_list_li"><oeePage></oeePage></li>
+    <li class="head_ul_list_li"><liveStatusPage></liveStatusPage></li>
+  </ul>
+  <div class="head_bottom_box">
+    <ul class="head_bottom_status_point {{statusPointPosition}}">
+      <li class="status_point_li point_li_1"></li>
+      <li class="status_point_li point_li_2"></li>
+      <li class="status_point_li point_li_3"></li>
+    </ul>
+    <div class="up_or_down_icon head_up_or_downleft {{dropdownRotate_180}}">
+    </div>
+    <div class="up_or_down_icon head_up_or_downright {{dropdownRotate_180}}">
+    </div>
+    <div class="head_dropdown_click_area" (click)="dropDownPage()"></div>
+  </div>
+</div>
+<div class="head_print_status_area">
+  <div class="head_print_status_button_start">
+    <div class="head_print_status_text">{{ 'START' | translate }}</div>
+  </div>
+  <div class="head_print_status_button_stop">
+    <div class="head_print_status_text">{{ 'STOP' | translate }}</div>
+  </div>
+</div>
+<alertList></alertList>

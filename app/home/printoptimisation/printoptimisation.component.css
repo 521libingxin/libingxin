@@ -1,0 +1,38 @@
+.printoptim_box{
+    width:760px;
+    height:450px;
+    position:absolute;
+    top:50px;
+    left:25px;
+}
+.printoptim_li{
+    width:180px;
+    height:190px;
+    background: url("../../../img/head/Icon_Print_optimisation_Background.png") no-repeat 0 0 ;
+    background-size:100% 100%;
+    float:left;
+    margin:0 10px 10px 0;
+}
+.printoptim_li_mid{
+    height:37px;
+    line-height:37px;
+    text-indent: 5px;
+}
+.printoptim_li_top{
+    height:100px;
+}
+.print_l_t1{
+    background: url("../../../img/head/Icon_Print_delay.png") no-repeat center center ;
+}
+.print_l_t2{
+    background: url("../../../img/head/Icon_Reverse.png") no-repeat center center ;
+}
+.print_l_t3{
+    background: url("../../../img/head/Icon_Inverse.png") no-repeat center center ;
+}
+.print_l_t4{
+    background: url("../../../img/head/Icon_Print_height.png") no-repeat center center ;
+}
+.print_l_t5{
+    background: url("../../../img/head/Icon_Stroke_Pitch.png") no-repeat center center ;
+}

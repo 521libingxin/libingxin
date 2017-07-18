@@ -1,0 +1,17 @@
+<div class="wizard_in_top" >
+    <div class="wizard_top_left fl">Ink flushing wizard</div>
+    <!--<div class="wizard_top_right fr">{{childIndex+1}}/{{childList.length}}</div>-->
+</div>
+<div class="wizards_body_top" >Ink flushing</div>
+<div *ngIf="selectPage == -1" class="ink_flushing_main">
+    <div class="ink_flushing_main_top">Select the required variant of ink system flush</div>
+    <div class="ink_flushing_main_list" *ngFor="let list of selectPictureList; let i=index">
+        <div class="ink_flushing_main_left fl">{{list.caption}}</div>
+        <button class="wizards_botton fr" (click)="openSelectPage(i)" >
+            select
+        </button>
+    </div>
+</div>
+<div *ngFor="let list of selectPictureList; let i=index">
+    <inkFlushingSelect *ngIf="i == selectPage" [selectList]="list.pictureList" (selectBack)="selectback()"></inkFlushingSelect>
+</div>

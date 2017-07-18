@@ -1,0 +1,82 @@
+.jet_profile_rectangle{
+	width: 620px; 
+	height: 60px; 
+    margin-left: 10px; 
+	float: left;
+}
+
+.jet_profile_button{
+	width:200px; 
+	height: 49px; 
+    background-image: url("../img/Button_49x200_Gradient3.png");
+	font-size:15px; 
+	margin-right: 20px; 
+	border-radius:5px; 
+	color: #FFFFFF;
+	float: right;
+}
+
+.jet_profile_text{
+	width:300px; 
+	height: 60px; 
+	font-size:15px; 
+	line-height:18px;
+	color:#000000;
+	padding-left: 10px; 
+	padding-top:10px;
+	display: inline-block;
+}
+
+.set_dialog_box{
+    background:#fff;
+    width:600px;
+    position:relative;
+    height:400x;
+    color: #666;
+}
+
+.set_dialog_top {
+    height: 35px;
+    line-height: 35px;
+    color: #8f8f8f;
+    text-align:center;
+}
+
+.set_dialog_content {
+    height: 350px;
+    line-height: 20px;
+    color: #8f8f8f;
+    text-align:center;
+}
+
+.set_dialog_bottom{
+	height: 60px;
+	/*position:absolute;
+	bottom:10px;*/
+	width: 100%;
+	margin-bottom: 10px;
+	text-align: center;
+}
+
+.set_dialog_btn{
+	background: url("../img/Blue_Button_65x200_Pressed.png");
+	background-size:240px 60px;
+	width:240px;
+	height:60px;
+	font-size:18px;
+	color:#fff;
+}
+.set_table_item_li{
+	width: 115px;
+	height: 40px;
+	float:left;
+}
+.set_draw_graph{
+	width:500px;
+	height: 300px;
+	margin: 8px auto;
+	display:inline-block;
+	/*border:1px solid red;*/
+}
+
+ 

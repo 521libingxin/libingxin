@@ -1,0 +1,38 @@
+
+<div class="preview_top">
+    <div style="width:380px;height:50px;margin:auto;">
+        <button *ngIf="prev != ''" (click)="preview(prev)" class="square_btn square_btn_preview fl">
+            <img src="../../../../../img/right.png" />
+        </button>
+        <button *ngIf="prev == ''" class="square_btn_disable square_btn_preview fl">
+            <img src="../../../../../img/right_disable.png" />
+        </button>
+        <button *ngIf="after != ''" (click)="preview(after)" class="square_btn square_btn_preview fr">
+            <img src="../../../../../img/left.png" />
+        </button>
+        <button *ngIf="after == ''" class="square_btn_disable square_btn_preview fr">
+            <img src="../../../../../img/left_disable.png" />
+        </button>
+    </div>
+    <button class="rectangle previewprint" (click)="print()">
+        <img src="../../../../../img/send_to_print_unselected.png" />
+    </button>
+    <button class="rectangle previewedit" (click)="edit()">
+        <img src="../../../../../img/Icon_Edit_current_Pressed.png" />
+    </button>
+</div>
+<div class="preview_body">
+<img class="homeimg"  class="previewimg" [style.width.px]="scale" src="{{imgurl}}" />
+<button class="prevsmall rectangle" (click)="small()">
+    <img src="../../../../../img/Icon_Grey_ZoomOut_Available.png" />
+</button>
+<button class="prevbig rectangle" (click)="big()">
+    <img src="../../../../../img/Icon_Grey_Zoom_in_Pressed.png" />
+</button>
+<button class="prevresize rectangle" (click)="resize()">
+    <img src="../../../../../img/Icon_Fit_screen_Pressed.png" />
+</button>
+</div>
+<div class="preview_foot">
+{{fileParent}}\{{fileName}}
+</div>

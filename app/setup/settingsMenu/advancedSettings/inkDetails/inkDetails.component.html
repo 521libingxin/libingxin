@@ -1,0 +1,58 @@
+<div style="overflow:hidden">
+	<button id="itechModule_btn" class="detail_button" (click)="hideDetailEle($event)">{{groupNames[0]}}
+        <img src="../../../../../img/Icon_Dropdown_Available.png" class="detail_btn_arrow"/></button>
+	<div id="itechModule" class="top_margin">
+	  <ul>
+			<li><text [textObj]="ITMCapacityObj"></text></li>
+			<li><text [textObj]="serialNumberOneObj"></text></li>
+			<li><text [textObj]="timestampOneObj"></text></li>
+			<li><text [textObj]="serialNumberTwoObj"></text></li>
+	    <li><text [textObj]="liftDataObj"></text></li>
+	  </ul>
+	</div>
+	<button id="inkCartridge_btn" class="detail_button" (click)="hideDetailEle($event)">{{groupNames[1]}}
+        <img src="../../../../../img/Icon_Dropdown_Available.png" class="detail_btn_arrow"/></button>
+	<div id="inkCartridge" class="top_margin">
+	  <ul>
+      <li><text [textObj]="expiryObj"></text></li>
+			<li><text [textObj]="inkCartridgeCapacityObj"></text></li>
+			<li><text [textObj]="inkCodeObj"></text></li>
+			<li><text [textObj]="inkNameObj"></text></li>
+			<li><text [textObj]="compatiblityCodeObj"></text></li>
+			<li><text [textObj]="viscosityAObj"></text></li>
+			<li><text [textObj]="viscosityBObj"></text></li>
+			<li><text [textObj]="inkCartridgeSerialNumberOneObj"></text></li>
+			<li><text [textObj]="inkCartridgeTimestampOneObj"></text></li>
+			<li><text [textObj]="inkCartridgeSerialNumberTwoObj"></text></li>
+			<li><text [textObj]="inkCartridgeTimestampTwoObj"></text></li>
+			<li><text [textObj]="batchCodeObj"></text></li>
+	  </ul>
+	</div>
+	<button id="makeupCartridge_btn" class="detail_button" (click)="hideDetailEle($event)">{{groupNames[2]}}
+        <img src="../../../../../img/Icon_Dropdown_Available.png" class="detail_btn_arrow"/></button>
+	<div id="makeupCartridge" class="top_margin">
+	  <ul>
+      <li><text [textObj]="makeupExpiryObj"></text></li>
+			<li><text [textObj]="makeupCapacityObj"></text></li>
+			<li><text [textObj]="makeupCodeObj"></text></li>
+			<li><text [textObj]="printerSerialNumOneObj"></text></li>
+			<li><text [textObj]="makeupTimestampOneObj"></text></li>
+			<li><text [textObj]="printerSerialNumTwoObj"></text></li>
+			<li><text [textObj]="makeupTimestampTwoObj"></text></li>
+			<li><text [textObj]="makeupBatchCodeObj"></text></li>
+	  </ul>
+	</div>
+	<button id="inkDetails_btn" class="detail_button" (click)="hideDetailEle($event)">{{groupNames[3]}}
+        <img src="../../../../../img/Icon_Dropdown_Available.png" class="detail_btn_arrow"/></button>
+	<div id="inkDetails" class="top_margin">
+	  <ul>
+			<li><list [selectObj]="currentInkSelectObj" (selectChange)="currentInkSelectChange($event)" ></list></li>
+      <li><text [textObj]="inkVersionObj"></text></li>
+			<li><text [textObj]="washTypeObj"></text></li>
+			<li><text [textObj]="makeupTypeObj"></text></li>
+			<li><text [textObj]="classObj"></text></li>
+			<li><text [textObj]="systemObj"></text></li>
+			<li><inputDialog [requestObj]="targetViscosityObj" (requestObjChange)="temperatureSetPointChange($event)"></inputDialog></li>
+	  </ul>
+	</div>
+</div>

@@ -1,0 +1,16 @@
+<div class="inkflush_select_main">
+    <div>{{selectList[index]['caption']}}</div>
+    <div class="inkflush_select_step">[step: {{index+1}}/{{selectList.length}}]</div>
+    <img class="inkflush_select_main_img" src="../../../../../img/wizard/{{selectList[index]['picture']}}" />
+</div>
+<div class="inkflush_select_button" >
+    <button (click)="changePicture(-1)" class="wizards_botton fl" >
+        <div class="wizards_left"></div>
+    </button>
+    <button (click)="changePicture(1)" class="wizards_botton fr" *ngIf="(index+1) < selectList.length">
+        <div class="wizards_right"></div>
+    </button>
+    <div (click)="changePicture(1)" class="wizard_botton_disable fr" *ngIf="(index+1) == selectList.length">
+        <div class="wizards_right"></div>
+    </div>
+</div>

@@ -1,0 +1,159 @@
+.qs_draw_content {
+	height: 280px;
+	width: 610px;
+	border:1px solid #999999; 
+	margin-left:10px;
+	margin-bottom:10px;
+	font-size: 12px;
+	display: inline-block;
+	overflow-y: auto;
+	color: #000000;
+	border-radius: 5px;
+}
+
+.qs_drawwave_time_caption {
+	width: 50px;
+	height: 20px;
+	display: inline-block;
+    float: left;
+	font-size: 15px;
+	padding-left: 2px;
+}
+
+.qs_drawwave_caption {
+	width: 100px;
+	height: 20px;
+	display: inline-block;
+    float: left;
+	font-size: 15px;
+	/*padding-left: 10px;*/
+}
+
+.qs_draw_control{
+	display: inline-block;
+    float:left;
+	height: 40px;
+	text-align: center;
+	margin: 1px;
+	margin-top: 3px;
+	padding:0px !important; 
+	border: 1px solid gray !important; 
+	border-radius: 5px !important; 
+	box-shadow: 0 3px 3px gray inset;
+}
+
+.qs_draw_timeframe_caption {
+	width: 100px;
+	height: 40px;
+	display: inline-block;
+    float: left;
+	font-size: 15px;
+	padding-left: 10px;
+	padding-top: 1em;
+}
+
+.qs_draw_num_input
+{
+	width: 70px !important;
+	height: 40px !important;
+	display:block;
+	/*margin-bottom:10px;*/
+	padding: 0px !important;
+	background-color:transparent;
+	color: #666666;
+	border: 0;
+	font-size: 15px;
+	text-align: center !important;
+	float: left;
+	border-top-left-radius: 5px;
+}
+
+.qs_draw_num_btn {
+	background-color: transparent;
+	border: 1px solid #666666;
+	height: 40px !important;
+	width: 50px !important;
+	display:block;
+	float: left;
+	padding: 0px !important;
+	margin: 0px !important;
+	border: 0px solid #666666 !important;
+}
+
+#draw_wave_encoder {
+	width : 250px;
+	height: 150px;
+	margin: 8px auto;
+	margin-left:10px;
+}
+
+#draw_wave_product {
+	width : 250px;
+	height: 150px;
+	margin: 8px auto;
+	margin-left:0px;
+}
+
+.frequency {
+	float:left; 
+	display: inline-block; 
+	margin-left:90px;
+}
+
+.frequency_value {
+	width: 30px;
+	height: 20px;
+	color: #FF0000; 
+	display: inline-block;
+	float:left;
+	font-size: 15px;
+	text-align:center;
+}
+
+.frequency_unit {
+	width: 30px;
+	height: 20px;
+	display: inline-block;
+	float: left;
+	font-size: 15px;
+	text-align:right;
+}
+
+.encoder_lable {
+	float:left; 
+	display: inline-block; 
+	margin-left:10px;
+}
+
+.product_lable {
+	float:left; 
+	display: inline-block; 
+	margin-left:35px;
+}
+
+.wave_encoder {
+	float:left; 
+	display: inline-block;
+}
+
+.wave_product {
+	float:left; 
+	display: inline-block; 
+	margin-left:20px;
+}
+
+.time_lable {
+	float:left; 
+	display: inline-block; 
+}
+
+.frame {
+	float:left; 
+	display: inline-block; 
+	margin-top:5px;
+}
+
+.sign_lable {
+	display: inline-block;
+	margin-top:7px;
+}

@@ -1,0 +1,64 @@
+<ul class="printoptim_box">
+    <li class="printoptim_li">
+        <div class="printoptim_li_top print_l_t1">
+
+        </div>
+        <div class="printoptim_li_mid">           
+        <span>{{ "Print delay" | translate }}</span>                       
+        </div>
+        <div class="printoptim_li_bottom">
+            <!--<number [resizeObj]="printDelay" (sizeChange)="printDelayChange($event)"></number>-->
+            <inputDialog [requestObj]="printDelay" ></inputDialog>
+            <!--<my-sizer [caption]="printDelay" [incrementer]="0.1" ></my-sizer>-->
+        </div>
+    </li>
+    <li class="printoptim_li">
+        <div class="printoptim_li_top print_l_t2">
+
+        </div>
+        <div class="printoptim_li_mid">
+            <span>{{ "Invert" | translate }}</span>  
+            
+        </div>
+        <div class="printoptim_li_bottom">
+            <checkbox [(checkObj)]="globalInverse"></checkbox>
+        </div>
+    </li>
+    <li class="printoptim_li">
+        <div class="printoptim_li_top print_l_t3">
+
+        </div>
+        <div class="printoptim_li_mid">
+            <span>{{ "Reverse" | translate }}</span> 
+        </div>
+        <div class="printoptim_li_bottom">
+            <checkbox [(checkObj)]="globalReverse"></checkbox>
+        </div>
+    </li>
+    <li class="printoptim_li">
+        <div class="printoptim_li_top print_l_t4">
+
+        </div>
+        <div class="printoptim_li_mid">
+            <span>{{ "Print height" | translate }}</span>           
+        </div>
+        <div class="printoptim_li_bottom">
+            <inputDialog [requestObj]="printHeight" ></inputDialog>
+            <!--<number [resizeObj]="printHeight"></number>-->
+            <!--<my-sizer [caption]="printHeight" [incrementer]="1" ></my-sizer>-->
+        </div>
+    </li>
+    <li class="printoptim_li">
+        <div class="printoptim_li_top print_l_t5">
+
+        </div>
+        <div class="printoptim_li_mid">
+            <span>{{ "Stroke pitch" | translate }}</span>
+            
+        </div>
+        <div class="printoptim_li_bottom">
+            <inputDialog [requestObj]="strokePitch" ></inputDialog>
+            <!--<my-sizer [caption]="strokePitch" [incrementer]="0.01"  ></my-sizer>-->
+        </div>
+    </li>
+</ul>

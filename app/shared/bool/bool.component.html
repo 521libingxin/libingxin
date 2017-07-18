@@ -1,0 +1,6 @@
+<div class="bool_rect">
+    <div class="bool_caption">{{ caption | translate }}</div>  
+    <div class="bool_data">
+        <checkbox [(checkObj)]="boolData" (checkChange) ="updataValue($event)"></checkbox>
+    </div>
+</div>

@@ -1,0 +1,59 @@
+.background_style{
+    width: 764px;
+    height: 390px;
+    margin-left: 18px;
+    margin-top: 60px;
+    position:absolute;
+    z-index:-1
+}
+.background_column{
+    width: 253px;
+    height: 390px;
+    border-right: 1px solid #b3b3b3;
+    float:left;
+}
+.livestatus_content{
+    width: 764px;
+    height: 390px;
+    margin-left: 18px;
+    margin-top: 60px; 
+}
+.livestatus_clolumn_content{
+    width: 254px; height: 390px; float:left;
+}
+.boder_color{
+    border-right: 1px solid #b3b3b3;
+}
+.hd_width{
+    width:180px;
+    height:20px;
+    line-height:20px;
+    font-size:0.9rem;
+}
+.d_inklevel{
+    position:absolute;
+    left:16px;
+    top:10px;
+}
+.d_pressure{
+    position:absolute;
+    left:16px;
+    top:32px;
+}
+.d_headtemperature{
+    position:absolute;
+    right:16px;
+    top:21px;
+}
+.background_white{
+    width: 254px; 
+    height: 30px;  
+    background-color:white;
+    border:0px;
+}
+.background_gray{
+    width: 254px; 
+    height: 30px; 
+    background-color:#e6e6e6; 
+    border: 0px;
+}

@@ -1,0 +1,15 @@
+<div>
+    <encoder-product-graphics></encoder-product-graphics>
+</div>
+<span></span>
+<ul>
+    <li><list [selectObj]="triggerBySelectObj" (selectChange)="triggerBySelectChange($event)" ></list></li>
+    <li><list [selectObj]="activeLevelSelectObj" (selectChange)="activeLevelSelectChange($event)" ></list></li>
+    <li><text [textObj]="currentPDStateObj"></text></li>
+    <li><inputDialog [requestObj]="printDelayObj"  (requestObjChange)="PDConfigChange($event)"></inputDialog></li>
+    <li><inputDialog [requestObj]="flightDistanceObj"  (requestObjChange)="PDConfigChange($event)"></inputDialog></li>
+    <li><inputDialog [requestObj]="jetVelocityMMPerSObj"  (requestObjChange)="PDConfigChange($event)"></inputDialog></li>
+    <li><inputDialog [requestObj]="pDPersistenceObj"  (requestObjChange)="PDConfigChange($event)"></inputDialog></li>
+    <li><inputDialog [requestObj]="productQueueDepthObj"  (requestObjChange)="PDConfigChange($event)"></inputDialog></li>
+    <li><bool [caption]="enableTestPrintBtnLabel" [(boolData)]="enableTestPrintBtnObj"></bool></li>
+</ul>

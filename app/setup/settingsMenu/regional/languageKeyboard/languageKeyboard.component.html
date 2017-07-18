@@ -1,0 +1,13 @@
+<!--<div class="selectbox" >
+    <span class="fl selectleft" >Language</span>
+    <button class="fr selectstyle form-control" (click)="translates()">{{language}}</button>
+</div>-->
+<list [selectObj]="selectObj" (selectChange)="selectChange($event)" ></list>
+<div class="selectbox" >
+    <span class="fl selectleft" >Keyboard layout</span>
+    <button class="fr selectstyle form-control">--</button>
+</div>
+<div class="selectbox" >
+    <span class="fl selectleft" >IME scheme</span>
+    <button class="fr selectstyle form-control">--</button>
+</div>

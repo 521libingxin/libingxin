@@ -1,0 +1,4 @@
+<div class = "readonly" [hidden]="textObj.value === undefined">
+    <div class="fl readonly_left"><span>{{textObj.caption | translate}}</span><span [hidden]="textObj.unit === ''" >&nbsp;({{textObj.unit}})</span></div>
+    <div class="fr readonly_value">{{textObj.value}}</div>
+</div>

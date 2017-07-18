@@ -1,0 +1,104 @@
+.position_box{
+    width:100%;
+    /*height:200px;*/
+    margin-left:5px;
+	float:left;
+}
+
+#position_print_height_title_id{
+	font-family: Tahoma, Geneva, sans-serif; 
+	font-weight:bold; 
+	color: #000000; 
+	font-size: 15px;
+	margin-left: 15px;
+}
+#position_line_movement_id{
+	width: 107px; 
+	height: 105px; 
+	background-color:#FFFFFF; 
+	border-radius:5px; 
+	border: 1px solid #363a43; 
+	margin-left: 15px; 
+	margin-top: 1px; 
+	float :left;
+}
+#position_movement_unit_id{
+	width: 130px; 
+	height: 100px; 
+	margin-left: 10px; 
+	margin-top: 1px; 
+	float:left;
+	font-family: Tahoma, Geneva, sans-serif;
+	color: #000000; 
+	font-size: 15px;
+}
+#position_line_movement_control_id{
+	width: 252px; 
+	height: 122px;  
+	margin-right: -3px; 
+	margin-top: 1px; 
+	float:right; 
+}
+.position_control_rectangle{
+	width: 260px; 
+	height: 51px; 
+	margin-bottom: 10px; 
+	font-family: Tahoma, Geneva, sans-serif; 
+	font-size: 15px;
+	color: #FFFFFF; 
+}
+.position_control_button_left{
+	width: 50px;
+	height: 52px;
+	border: 0;
+	background-color: #242e6a;
+	font-size: 15px;
+	background-image: url("../img/Toggle_49_Left_Gradient2.png");
+    background-size: 50px 52px;
+    float: left;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    color: #FFFFFF; 
+}
+.position_control_button_right{
+	width: 50px;
+	height: 52px;
+	border: 0;
+	background-color: #242e6a;
+	font-size: 15px;
+	background-image: url("../img/Toggle_49_Right_Gradient2.png");
+    background-size: 50px 52px;
+    float: left;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    color: #FFFFFF; 
+}
+.position_control_text{
+	width: 50px; 
+	height: 35px; 
+	background-color: #FFFFFF; 
+	border: 1px solid #363a43; 
+	float: left; 
+	color:#000000; 
+	padding-top: 15px;
+	text-align: center;
+}
+
+#position_calibrate_id{
+	width: 600px; 
+	height: 65px; 
+	margin-top: 10px; 
+	margin-left:410px; 
+}
+
+#position_calibrate_button_id{
+	width:217px; 
+	height:55px;
+	font-size:15px;  
+	color: #FFFFFF;
+	border:0;
+	/*background-color:gray; */
+	background-image: url("/img/Button_49x200_Gradient2.png");
+	background-size: 217px 55px;
+	border-radius:5px; 
+}

@@ -1,0 +1,43 @@
+<ul class="connection_main_left">
+    <li class="cml_li" *ngFor="let item of headlist">
+        <div class="cml_li_left {{item[2]}}">
+            <div class="head_line"></div>
+        </div>
+        <div class="cml_li_right">
+            <div class="cml_li_top">{{item[0]}}</div>
+            <div class="cml_li_bottom">{{item[1]}}</div>
+        </div>
+    </li>
+</ul>
+<div class="connection_main_right">
+    <div class="cmr_left">
+        <div class="cmr_left_top makeupicon">{{ 'Make-up level' | translate }}</div>
+        <div class="cmr_left_body">
+            <div id="overlay_left" class="cmr_left_body_hover" [style.top.px] = "leftLine">
+                <div class="cmr_left_b_h_on"></div>
+            </div>
+        </div>
+    </div>
+    <div class="cmr_right">
+        <div class="cmr_left_top inklevelicon">{{ 'Ink level' | translate }}</div>
+        <div class="cmr_left_body">
+            <div id="overlay_right" class="cmr_left_body_hover" [style.top.px] = "rightLine">
+                <div class="cmr_left_b_h_on"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="head_list_bt">
+    <ul class="head_page1bt_left">
+        <li class="head_page1bt_list {{item[2]}}" *ngFor="let item of headlist">
+            <div class="head_line"></div>
+        </li>
+    </ul>
+    <div class="head_list_md">{{ 'Connections and consumables' | translate }}</div>
+    <div class="head_page1bt_right">
+        <div class="head_page1bt_makeupicon"></div>
+        <div class="head_page1bt_listr"></div>
+        <div class="head_page1bt_inklevel"></div>
+        <div class="head_page1bt_listr"></div>
+    </div>
+</div>

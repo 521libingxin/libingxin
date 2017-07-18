@@ -1,0 +1,29 @@
+.network_modals_box{
+    height:540px;
+    width:600px;
+}
+.network_modals_top{
+    font-size:1.1rem;
+	height:70px;
+	line-height: 70px;
+	text-align: center;
+	font-weight: bold;
+}
+.network_modals_main{
+    position:absolute;
+	top:70px;
+	bottom:90px;
+}
+.network_modals_bottom{
+	position:absolute;
+	bottom:0;
+	left:165px;
+	right:165px;
+	height:80px;
+	line-height: 80px;
+}
+.network_modals_bottom .wizards_complete,
+.network_modals_bottom .wizards_botton{
+	width:120px;
+	text-align: center;
+}

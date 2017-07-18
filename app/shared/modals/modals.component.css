@@ -1,0 +1,55 @@
+.modal_bg{
+    position:fixed;
+    background:#666;
+    opacity:0.5;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    z-index:2000;
+    display:none;
+}
+.modal_box{
+    position:fixed;
+    left:50%;
+    top:300px;
+    box-shadow: 0 0 5px #333;
+    border-radius: 10px;
+    overflow:hidden;
+    background:#fff;
+    transform:translate(-50%,-50%);
+    -ms-transform:translate(-50%,-50%);
+    -moz-transform:translate(-50%,-50%);
+    -webkit-transform:translate(-50%,-50%);
+    -o-transform:translate(-50%,-50%);
+    z-index:3000;
+    display:none;
+}
+.modal_close_icon{
+    width:50px;
+    height:50px;
+    position:fixed;
+    left:50%;
+    top:30px;
+    background:url("../../../img/Button_IO_Test_Gray.png") no-repeat center center;
+    transform:translate(280px,0);
+    -ms-transform:translate(280px,0);
+    -moz-transform:translate(280px,0);
+    -webkit-transform:translate(280px,0);
+    -o-transform:translate(280px,0);
+    border-radius:10px;
+    display:none;
+    box-shadow: 0 0 5px #333;
+    z-index:3000;
+}
+.modal_close_in{
+    background:url("../../../img/Icon_Cancel_cross_Available.png") no-repeat center center;
+    width:50px;
+    height:50px;
+}
+.moduletrue{
+    display:block;
+}
+.modulefalse{
+    display:false;
+}

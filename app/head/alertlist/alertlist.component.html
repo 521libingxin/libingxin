@@ -1,0 +1,71 @@
+<div id="alert_dropdown_box" [@alertDropdownAnimation]="alertDropdownState" class="alert_dropdown_box">
+  <div class="alert_list_box">
+    <ul class="alertlist_ul">
+        <li class="alertlist_li" *ngFor="let alert of alertList; let j=index" >
+            <div class="alert_amber"></div>
+            <div class="alertText">{{alert.shortDesc}}</div>
+            <button class="alertdetails" (click)="onPopAlert(j)">
+              <div class="alert_detail_img"></div>
+              {{ 'Details' | translate }}
+            </button>
+            <button class="alerticon_{{alert.clearance}}" (click)="clearAlert(j)">
+              <div class="alert_icon_img"></div>
+            </button>
+        </li>
+    </ul>
+    <div class="alertlist_clear_box">
+        <button class="alertlist_clear_btn" (click)="clearAllAlerts()">
+          <div class="alertclearallin"></div>
+          {{ 'Clear all' | translate }}
+        </button>
+    </div>
+  </div>
+  <div class="alert_box" (click)="alertDropdown()">
+    <div class="headmoreall">
+      <div class="headmoretop">{{ 'STATUS' | translate }}</div>
+      <div class="headmoremid">{{curentALertDesc }}</div>
+      <div class="headmorebottom {{rotate_180}}"></div>
+    </div>
+  </div>
+</div>
+
+<modals [(modalopen)]="alertdialog" >
+    <main class="set_dialog_box">
+      <div class="alertdialogbox" *ngIf="alertdialog">
+          <div class="alertdialogtop">{{moduleobj.shortDesc}}</div>
+          <div class="alertdialogmid">
+              <div class="alertdialogmide_left">
+                  <ul class="alert_d_m_ul">
+                      <li class="alert_d_m_li">
+                          <div class="fl adml_l">Date</div>
+                          <div class="fr adml_r">{{moduleobj.timeStamp}}</div>
+                      </li>
+                      <li class="alert_d_m_li">
+                          <div class="fl adml_l">Alert ID</div>
+                          <div class="fr adml_r">{{moduleobj.id}}</div>
+                      </li>
+                      <li class="alert_d_m_li alert_border_bottom">
+                          <div class="fl adml_l">Level</div>
+                          <div class="fr adml_r">Warning</div>
+                      </li>
+                      <li class="alert_d_m_li">
+                          <div class="fl adml_l">Detailed information</div>
+                      </li>
+                      <li class="alert_d_m_li">
+                          <div class="fl adml_new">{{moduleobj.longDesc}}The ink pressure is critically hight</div>
+                      </li>
+                  </ul>
+              </div>
+              <div class="alertdialogmide_right">
+                  <div class="admr_top">Solve</div>
+                  <div class="admr_mid">or scan QR Code for help</div>
+                  <img class="admr_img" src="{{moduleobj.barcodeString}}" />
+              </div>
+          </div>
+          <div class="alertdialogbtn">
+              <div class="alertdialogbtnl{{moduleobj.clearance}} fl" (click)="clearEvent()">Clear</div>
+              <div class="alertdialogbtnr fr" (click)="closemodule()">Cannel</div>
+          </div>
+      </div>
+    </main>
+</modals>
